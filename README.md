@@ -1,7 +1,5 @@
 # Spatial Discrete Event Simulation (SpaDES)
 
-Copyright (C) 2015 Her Majesty the Queen in Right of Canada, as represented by the Minister of Natural Resources Canada
-
 ### Develop and run spatially explicit discrete event simulation models
 
 Easily implement a variety of simulation models, with a focus on spatially explicit models. These include raster-based, event-based, and agent-based models.
@@ -14,7 +12,7 @@ Included are numerous tools to rapidly visualize raster and other maps.
 
 ## Installation
 
-Building packages from source the appropriate development libraries for your operating system (*e.g.*, Windows users should install [Rtools](http://cran.r-project.org/bin/windows/Rtools/)). In order to build the vignettes from source.
+Building packages from source requires the appropriate development libraries for your operating system (*e.g.*, Windows users should install [Rtools](http://cran.r-project.org/bin/windows/Rtools/)).
 
 The suggested package `fastshp` can be installed with:
 
@@ -22,8 +20,7 @@ The suggested package `fastshp` can be installed with:
 install.packages("fastshp", repos="http://rforge.net", type="source")
 ```
 
-
-### Current stable release [![Build Status](https://travis-ci.org/PredictiveEcology/SpaDES.svg?branch=master)](https://travis-ci.org/PredictiveEcology/SpaDES) [![Coverage Status](https://coveralls.io/repos/PredictiveEcology/SpaDES/badge.svg?branch=master)](https://coveralls.io/r/PredictiveEcology/SpaDES?branch=master)
+### Current stable release [![Build Status](https://travis-ci.org/PredictiveEcology/SpaDES.svg?branch=master)](https://travis-ci.org/PredictiveEcology/SpaDES) [![Coverage Status](https://coveralls.io/repos/PredictiveEcology/SpaDES/badge.svg?branch=master)](https://coveralls.io/r/PredictiveEcology/SpaDES?branch=master) [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/SpaDES)](https://cran.r-project.org/package=SpaDES) [![Downloads](http://cranlogs.r-pkg.org/badges/grand-total/SpaDES)](https://cran.rstudio.com/package=SpaDES) [![DOI](https://zenodo.org/badge/17892/PredictiveEcology/SpaDES.svg)](https://zenodo.org/badge/latestdoi/17892/PredictiveEcology/SpaDES)
 
 **Install from CRAN:**
 
@@ -53,9 +50,7 @@ install_github("PredictiveEcology/SpaDES", ref="development") # unstable
 
 **Vignettes:**
 
-```r
-browseVignettes(package="SpaDES")
-```
+Available via our [wiki](https://github.com/PredictiveEcology/SpaDES/wiki/Help-Vignettes) or via `browseVignettes(package="SpaDES")`.
 
 **Wiki:**
 
@@ -64,3 +59,7 @@ browseVignettes(package="SpaDES")
 ## Reporting bugs
 
 Contact us via the package GitHub site: [https://github.com/PredictiveEcology/SpaDES/issues](https://github.com/PredictiveEcology/SpaDES/issues).
+
+-----
+
+Copyright (C) 2015 Her Majesty the Queen in Right of Canada, as represented by the Minister of Natural Resources Canada
