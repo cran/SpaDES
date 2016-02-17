@@ -12,8 +12,8 @@ Description: Easily implement a variety of simulation models, with a focus on
     installed with `install.packages("fastshp", repos="http://rforge.net",
     type="source")`.
 URL: https://github.com/PredictiveEcology/SpaDES
-Version: 1.1.0
-Date: 2016-01-25
+Version: 1.1.1
+Date: 2016-02-16
 Authors@R: c(
     person(c("Alex", "M"), "Chubaty", email="alexander.chubaty@canada.ca",
     role=c("aut", "cre")),
@@ -28,12 +28,13 @@ Authors@R: c(
     )
 Additional_repositories: http://rforge.net
 Depends: R (>= 3.2.2)
-Suggests: covr, fastshp, knitr, Matrix, RColorBrewer, rgdal, rmarkdown,
-        testthat, tkrplot
-Imports: archivist, CircStats, data.table, DiagrammeR, digest, dplyr,
-        ff, ffbase, fpCompare, ggplot2, graphics, grid, gridBase, httr,
-        igraph, lazyeval, lubridate (>= 1.3.3), methods, R.utils,
-        RandomFields, raster, secr, sp, stringi, stringr
+Suggests: covr, fastshp, knitr, Matrix, png, RColorBrewer, rgdal,
+        rmarkdown, testthat, tkrplot
+Imports: archivist (>= 2.0), CircStats, data.table, DiagrammeR (>=
+        0.8.2), digest, dplyr, ff, ffbase, fpCompare, ggplot2,
+        graphics, grid, gridBase, httr, igraph, lazyeval, lubridate (>=
+        1.3.3), methods, R.utils, RandomFields, raster, secr, sp,
+        stringi, stringr
 License: GPL-3
 VignetteBuilder: knitr
 BugReports: https://github.com/PredictiveEcology/SpaDES/issues
@@ -52,7 +53,7 @@ Collate: 'agent.R' 'SELES.R' 'misc-methods.R'
         'spades-package.R' 'splitRaster.R' 'spread-process.R' 'zzz.R'
 RoxygenNote: 5.0.1
 NeedsCompilation: no
-Packaged: 2016-01-26 18:32:40 UTC; achubaty
+Packaged: 2016-02-16 19:17:57 UTC; achubaty
 Author: Alex M Chubaty [aut, cre],
   Eliot J B McIntire [aut],
   Yong Luo [ctb],
@@ -61,4 +62,4 @@ Author: Alex M Chubaty [aut, cre],
     Minister of Natural Resources Canada [cph]
 Maintainer: Alex M Chubaty <alexander.chubaty@canada.ca>
 Repository: CRAN
-Date/Publication: 2016-01-26 23:08:21
+Date/Publication: 2016-02-17 00:12:24

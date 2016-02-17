@@ -178,9 +178,7 @@ unlink(ftmp)
 mySim <- spades(mySim) # runs the simulation
 
 # overview of the events in the simulation
-if (packageVersion("DiagrammeR") >= "0.8.2") {
-  eventDiagram(mySim, "0000-06-01", n = 200, width = 720)
-}
+eventDiagram(mySim, "0000-06-01", n = 200, width = 720)
 
 ## ----module-object-diagrams, eval=TRUE, echo=TRUE, message=FALSE, fig.width=7----
 require(SpaDES)
@@ -199,9 +197,7 @@ depsEdgeList(mySim, FALSE)      # all object dependency relationships
 moduleDiagram(mySim)            # simplified visual representation of modules
 
 # detailed visual representation of objects
-if (packageVersion("DiagrammeR") >= "0.8.2") {
-  objectDiagram(mySim, width = 720)
-}
+objectDiagram(mySim, width = 720)
 
 ## ----checkpoints, echo=TRUE, eval=TRUE, message=FALSE--------------------
 
@@ -318,7 +314,7 @@ unlink(ftmp)
 #  newModule(name = "randomLandscapes", path = "custom-modules", open = TRUE)
 
 ## ----module-group-init, eval=FALSE---------------------------------------
-#  library(DiagrammeR, lib.loc = .Library.tmp)
+#  library(DiagrammeR)
 #  library(SpaDES)
 #  
 #  outputDir <- file.path(tempdir(), "simOutputs")
