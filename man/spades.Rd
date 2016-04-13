@@ -14,7 +14,7 @@ spades(sim, debug)
 \S4method{spades}{simList,missing}(sim)
 }
 \arguments{
-\item{sim}{Character string for the \code{simList} simulation object.}
+\item{sim}{A \code{simList} simulation object, generally produced by \code{simInit}.}
 
 \item{debug}{Optional logical flag determines whether sim debug info
 will be printed (default is \code{debug=FALSE}).}
@@ -38,7 +38,10 @@ to the values of various simList slot components.
  mySim <- simInit(
    times = list(start = 0.0, end = 2.0, timeunit = "year"),
    params = list(
-     .globals = list(stackName = "landscape", burnStats = "nPixelsBurned")
+     .globals = list(stackName = "landscape", burnStats = "nPixelsBurned"),
+     fireSpread = list(.plotInitialTime=NA),
+     randomLandscapes = list(.plotInitialTime=NA),
+     caribouMovement = list(.plotInitialTime=NA)
    ),
    modules = list("randomLandscapes", "fireSpread", "caribouMovement"),
    paths = list(modulePath = system.file("sampleModules", package = "SpaDES"))
@@ -51,7 +54,7 @@ to the values of various simList slot components.
 Alex Chubaty
 }
 \references{
-Matloff, N. (2011). The Art of R Programming (ch. 7.8.3). San Fransisco, CA: No Starch Press, Inc.. Retrieved from \url{http://www.nostarch.com/artofr.htm}
+Matloff, N. (2011). The Art of R Programming (ch. 7.8.3). San Fransisco, CA: No Starch Press, Inc.. Retrieved from \url{https://www.nostarch.com/artofr.htm}
 }
 \seealso{
 \code{\link{simInit}}, \code{\link{SpaDES}}

@@ -77,7 +77,7 @@ setMethod(
     if (exists(name, envir = envir(sim))) {
       return(invisible(TRUE))
     } else {
-      simName <- .objectNames("spades", "simList", "sim")[[1]]$objs
+      simName <- objectNames("spades", "simList", "sim")[[1]]$objs
       message(paste(name, "does not exist in", simName))
       return(FALSE)
     }
@@ -99,7 +99,7 @@ setMethod(
       }
     } else {
       message(
-        paste(name, "does not exist in", deparse(substitute(mySim)))
+        paste(name, "does not exist in", deparse(substitute(sim)))
       )
       return(FALSE)
     }
@@ -237,6 +237,7 @@ setMethod(
           gsub(paste0("^.*params\\(sim\\)\\$", uM, "\\$"), "", .) %>%
           gsub("[!\"#$%&\'()*+,/:;<=>?@[\\^`{|}~-].*$","", .) %>%
           gsub("]*", "", .) %>%
+          gsub(" *", "", .) %>%
           unique(.) %>%
           sort(.)
 

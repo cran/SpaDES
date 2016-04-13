@@ -58,7 +58,8 @@ return a raster with values. See Details.}
 
 \item{mapID}{Logical. If TRUE, returns a raster of events ids.
 If FALSE, returns a raster of iteration numbers,
-i.e., the spread history of one or more events.}
+i.e., the spread history of one or more events. NOTE:
+this is overridden if \code{returnIndices} is \code{TRUE}.}
 
 \item{plot.it}{If TRUE, then plot the raster at every iteraction,
 so one can watch the spread event grow.}
@@ -76,7 +77,7 @@ Either a \code{RasterLayer} indicating the spread of the process in
 the landscape or a \code{data.table}. If a \code{RasterLayer}, then it represents
 every pixel in which a successful spread event occurred. For the case of, say, a fire
 this would represent every pixel that burned. If \code{returnIndices} is \code{TRUE},
-then this function returns a \code{data.table} with 4 columns:
+then this function returns a \code{data.table} with columns:
 
 \code{indices} is the pixel indices of pixels that have been touched by the spread
 algorithm.
@@ -185,7 +186,7 @@ fires <- spread(hab, loci = as.integer(sample(1:ncell(hab), 10)), returnIndices=
                 0.235, 0, NULL, 1e8, 8, iterations = 2, mapID = TRUE)
 fullRas <- raster(hab)
 fullRas[] <- 1:ncell(hab)
-burned <- fires[active==FALSE]
+burned <- fires[active == FALSE]
 burnedMap <- rasterizeReduced(burned, fullRas, "eventID", "indices")
 Plot(burnedMap, new=TRUE)
 }

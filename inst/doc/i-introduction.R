@@ -2,7 +2,7 @@
 #  install.packages("fastshp", repos="http://rforge.net", type="source")
 
 ## ----SpaDES-demo, eval=FALSE, echo=TRUE----------------------------------
-#  require("SpaDES")
+#  library("SpaDES")
 #  demo("spades-simulation", package="SpaDES")
 
 ## ----SpaDES-modules, eval=FALSE, echo=TRUE-------------------------------

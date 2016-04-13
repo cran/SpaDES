@@ -36,7 +36,7 @@
 #  ))
 
 ## ----passing-params, eval=FALSE, echo=TRUE-------------------------------
-#  require(SpaDES)
+#  library(SpaDES)
 #  
 #  outputDir <- file.path(tempdir(), "simOutputs")
 #  times <- list(start = 0.0, end = 20.0)
@@ -104,7 +104,7 @@
 
 ## ----event-functions, echo=TRUE, eval=FALSE------------------------------
 #  ## sample event functions from the default `randomLandscapes` module
-#  require(raster)
+#  library(raster)
 #  randomLandscapesInit <- function(sim) {
 #    if (is.null(params(sim)$randomLandscapes$inRAM)) {
 #      inMemory <- FALSE
@@ -148,10 +148,10 @@
 #  }
 
 ## ----sim-eventDiagram, eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE----
-require(igraph) # for %>%
-require(SpaDES)
+library(igraph) # for %>%
+library(SpaDES)
 parameters <- list(
-  .globals = list(stackName="landscape", burnStats="nPixelsBurned"),
+  .globals = list(stackName = "landscape", burnStats = "nPixelsBurned"),
   .progress = list(NA),
   randomLandscapes = list(nx = 100L, ny = 100L, inRAM = TRUE),
   fireSpread = list(nFires = 10L, spreadprob = 0.225, its = 1e6,
@@ -181,9 +181,9 @@ mySim <- spades(mySim) # runs the simulation
 eventDiagram(mySim, "0000-06-01", n = 200, width = 720)
 
 ## ----module-object-diagrams, eval=TRUE, echo=TRUE, message=FALSE, fig.width=7----
-require(SpaDES)
+library(SpaDES)
 
-times <- list(start=0.0, end=20)
+times <- list(start = 0.0, end = 20)
 parameters <- list(
   .globals = list(stackName = "landscape", burnStats = "nPixelsBurned")
 )
@@ -220,11 +220,11 @@ checkpointInterval(mySim)
 
 ## ----progress, echo=TRUE, eval=TRUE, message=FALSE-----------------------
 # initialize a new simulation, setting the progress parameters
-mySim <- simInit(times=list(start=0.0, end=100.0),
-                 params=list(.globals=list(stackName="landscape"),
-                             .progress=list(type="text", interval=10)),
-                 modules=list("randomLandscapes"),
-                 paths=list(modulePath=system.file("sampleModules", package="SpaDES")))
+mySim <- simInit(times = list(start = 0.0, end = 100.0),
+                 params = list(.globals = list(stackName = "landscape"),
+                               .progress = list(type = "text", interval = 10)),
+                 modules = list("randomLandscapes"),
+                 paths = list(modulePath = system.file("sampleModules", package = "SpaDES")))
 
 # retrieve the checkpoint params from the simulation object
 progressType(mySim)
@@ -232,20 +232,20 @@ progressInterval(mySim)
 
 ## ----load-save, echo=TRUE, eval=TRUE, message=FALSE----------------------
 # initialize a new simulation, setting the load and save parameters
-require(data.table)
+library(data.table)
 
 outputDir <- file.path(tempdir(), "simOutputs")
 mySim <- simInit(times = list(start = 0.0, end = 10),
                  params = list(
                    .globals = list(stackName = "landscape"),
                    randomLandscapes = list(
-                     .saveInitialTime = 0, .saveInterval = 10, .saveObjects = c("landscape"),
+                     .saveInitialTime = 0, .saveInterval = 10,
+                     .saveObjects = c("landscape"),
                      .savePath = file.path(outputDir, "randomLandscapes"))
                    ),
                  modules = list("randomLandscapes"),
                  paths = list(modulePath = system.file("sampleModules", package = "SpaDES"),
-                            outputPath = outputDir),
-                 #inputs = data.table(file = filelist),
+                              outputPath = outputDir),
                  outputs = data.table(objectName = "landscape")
 )
 

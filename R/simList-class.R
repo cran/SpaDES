@@ -29,6 +29,9 @@
 #' @slot events     The list of scheduled events (i.e., event queue), as a
 #'                  \code{data.table}. See 'Event Lists' for more information.
 #'
+#' @slot current    The current event, as a \code{data.table}.
+#'                  See 'Event Lists' for more information..
+#'
 #' @slot completed  The list of completed events, as a \code{data.table}.
 #'                  See 'Event Lists' for more information.
 #'
@@ -68,7 +71,7 @@
 #'
 #' @section Event Lists:
 #'
-#' Event lists are sorted (keyed) by time.
+#' Event lists are sorted (keyed) first by time, second by priority.
 #' Each event is represented by a \code{\link{data.table}} row consisting of:
 #' \tabular{ll}{
 #'   \code{eventTime} \tab The time the event is to occur.\cr
@@ -77,12 +80,12 @@
 #'   \code{eventPriority} \tab The priority given to the event. \cr
 #' }
 #'
-#' @include module-dependencies-class.R
+#' @include helpers.R module-dependencies-class.R
 #' @aliases .simList
 #' @rdname simList-class
 #' @importFrom data.table as.data.table data.table
 #'
-#' @references Matloff, N. (2011). The Art of R Programming (ch. 7.8.3). San Fransisco, CA: No Starch Press, Inc.. Retrieved from \url{http://www.nostarch.com/artofr.htm}
+#' @references Matloff, N. (2011). The Art of R Programming (ch. 7.8.3). San Fransisco, CA: No Starch Press, Inc.. Retrieved from \url{https://www.nostarch.com/artofr.htm}
 #'
 #' @author Alex Chubaty and Eliot McIntire
 #'
@@ -90,8 +93,8 @@ setClass(
   ".simList",
   slots = list(
     modules = "list", params = "list", events = "data.table",
-    completed = "data.table", depends = ".simDeps", simtimes = "list",
-    inputs = "list", outputs = "list", paths = "list"
+    current = "data.table", completed = "data.table", depends = ".simDeps",
+    simtimes = "list", inputs = "list", outputs = "list", paths = "list"
   ),
   prototype = list(
     modules = as.list(NULL),
@@ -99,8 +102,9 @@ setClass(
       .checkpoint = list(interval = NA_real_, file = NULL),
       .progress = list(type = NULL, interval = NULL)
     ),
-    events = as.data.table(NULL),
-    completed = as.data.table(NULL),
+    events = .emptyEventListObj,
+    current = .emptyEventListObj,
+    completed = .emptyEventListObj,
     depends = new(".simDeps", dependencies = list(NULL)),
     simtimes = list(
       current = 0.00, start = 0.00, end = 1.00, timeunit = NA_character_
@@ -116,13 +120,13 @@ setClass(
   validity = function(object) {
     # check for valid sim times
     if (is.na(object@simtimes$end)) {
-     stop("simulation end time must be specified.")
+      stop("simulation end time must be specified.")
     } else {
-     if (object@simtimes$start >= object@simtimes$end) {
-       stop("simulation start time should occur before end time.")
-     }
+      if (object@simtimes$start > object@simtimes$end) {
+        stop("simulation end time cannot be before start time.")
+      }
     }
-})
+  })
 
 ################################################################################
 #' @inheritParams .simList
@@ -171,7 +175,9 @@ setClass("simList_",
 
 setAs(from = "simList_", to = "simList", def = function(from) {
   x <- as(as(from, ".simList"), "simList")
-  x@.envir <- as.environment(from@.list)
+  #x@.envir <- as.environment(from@.list)
+  x@.envir <- new.env(new.env(parent = emptyenv()))
+  list2env(from@.list, envir=x@.envir)
   return(x)
 })
 
@@ -195,6 +201,6 @@ setAs(from = "simList", to = "simList_", def = function(from) {
 setMethod("initialize",
           signature(.Object = "simList"),
           definition=function(.Object) {
-            .Object@.envir <- new.env(parent=.GlobalEnv)
+            .Object@.envir <- new.env(parent = .GlobalEnv)
             return(.Object)
-})
+          })
