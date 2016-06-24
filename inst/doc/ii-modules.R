@@ -202,17 +202,17 @@ objectDiagram(mySim, width = 720)
 ## ----checkpoints, echo=TRUE, eval=TRUE, message=FALSE--------------------
 
 # initialize a new simulation, setting the checkpoint interval and filename.
-times <- list(start=0, end=30)
+times <- list(start = 0, end = 30)
 parameters <- list(
   .globals = list(stackName = "landscape"),
   .checkpoint = list(interval = 10, file = "chkpnt.RData")
 )
 modules <- list("randomLandscapes", "caribouMovement")
 paths <- list(
-  modulePath = system.file("sampleModules", package="SpaDES")
+  modulePath = system.file("sampleModules", package = "SpaDES")
 )
 
-mySim <- simInit(times=times, params=parameters, modules=modules, paths=paths)
+mySim <- simInit(times = times, params = parameters, modules = modules, paths = paths)
 
 # retrieve the checkpoint params from the simulation object
 checkpointFile(mySim)
@@ -267,11 +267,10 @@ outputs(mySim) <- data.frame(
   objectName = "landscape", fun = "writeRaster", package = "raster",
   saveTime = c(3,6), arguments = I(lapply(c(3,6), function(x) {
     list(dataType = "FLT4S", format = "raster", overwrite = TRUE)
-  })))
+})))
 mySim2 <- spades(mySim)
 dev.off()
 unlink(ftmp)
-
 
 ## ----save-events, echo=TRUE, eval=FALSE, message=FALSE-------------------
 #  ### WITHIN A MODULE:

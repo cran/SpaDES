@@ -7,6 +7,7 @@
 <meta charset="utf-8">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
+
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <meta name="author" content="Alex M. Chubaty" />
@@ -64,6 +65,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </style>
 
 
+
 <link href="data:text/css;charset=utf-8,body%20%7B%0Abackground%2Dcolor%3A%20%23fff%3B%0Amargin%3A%201em%20auto%3B%0Amax%2Dwidth%3A%20700px%3B%0Aoverflow%3A%20visible%3B%0Apadding%2Dleft%3A%202em%3B%0Apadding%2Dright%3A%202em%3B%0Afont%2Dfamily%3A%20%22Open%20Sans%22%2C%20%22Helvetica%20Neue%22%2C%20Helvetica%2C%20Arial%2C%20sans%2Dserif%3B%0Afont%2Dsize%3A%2014px%3B%0Aline%2Dheight%3A%201%2E35%3B%0A%7D%0A%23header%20%7B%0Atext%2Dalign%3A%20center%3B%0A%7D%0A%23TOC%20%7B%0Aclear%3A%20both%3B%0Amargin%3A%200%200%2010px%2010px%3B%0Apadding%3A%204px%3B%0Awidth%3A%20400px%3B%0Aborder%3A%201px%20solid%20%23CCCCCC%3B%0Aborder%2Dradius%3A%205px%3B%0Abackground%2Dcolor%3A%20%23f6f6f6%3B%0Afont%2Dsize%3A%2013px%3B%0Aline%2Dheight%3A%201%2E3%3B%0A%7D%0A%23TOC%20%2Etoctitle%20%7B%0Afont%2Dweight%3A%20bold%3B%0Afont%2Dsize%3A%2015px%3B%0Amargin%2Dleft%3A%205px%3B%0A%7D%0A%23TOC%20ul%20%7B%0Apadding%2Dleft%3A%2040px%3B%0Amargin%2Dleft%3A%20%2D1%2E5em%3B%0Amargin%2Dtop%3A%205px%3B%0Amargin%2Dbottom%3A%205px%3B%0A%7D%0A%23TOC%20ul%20ul%20%7B%0Amargin%2Dleft%3A%20%2D2em%3B%0A%7D%0A%23TOC%20li%20%7B%0Aline%2Dheight%3A%2016px%3B%0A%7D%0Atable%20%7B%0Amargin%3A%201em%20auto%3B%0Aborder%2Dwidth%3A%201px%3B%0Aborder%2Dcolor%3A%20%23DDDDDD%3B%0Aborder%2Dstyle%3A%20outset%3B%0Aborder%2Dcollapse%3A%20collapse%3B%0A%7D%0Atable%20th%20%7B%0Aborder%2Dwidth%3A%202px%3B%0Apadding%3A%205px%3B%0Aborder%2Dstyle%3A%20inset%3B%0A%7D%0Atable%20td%20%7B%0Aborder%2Dwidth%3A%201px%3B%0Aborder%2Dstyle%3A%20inset%3B%0Aline%2Dheight%3A%2018px%3B%0Apadding%3A%205px%205px%3B%0A%7D%0Atable%2C%20table%20th%2C%20table%20td%20%7B%0Aborder%2Dleft%2Dstyle%3A%20none%3B%0Aborder%2Dright%2Dstyle%3A%20none%3B%0A%7D%0Atable%20thead%2C%20table%20tr%2Eeven%20%7B%0Abackground%2Dcolor%3A%20%23f7f7f7%3B%0A%7D%0Ap%20%7B%0Amargin%3A%200%2E5em%200%3B%0A%7D%0Ablockquote%20%7B%0Abackground%2Dcolor%3A%20%23f6f6f6%3B%0Apadding%3A%200%2E25em%200%2E75em%3B%0A%7D%0Ahr%20%7B%0Aborder%2Dstyle%3A%20solid%3B%0Aborder%3A%20none%3B%0Aborder%2Dtop%3A%201px%20solid%20%23777%3B%0Amargin%3A%2028px%200%3B%0A%7D%0Adl%20%7B%0Amargin%2Dleft%3A%200%3B%0A%7D%0Adl%20dd%20%7B%0Amargin%2Dbottom%3A%2013px%3B%0Amargin%2Dleft%3A%2013px%3B%0A%7D%0Adl%20dt%20%7B%0Afont%2Dweight%3A%20bold%3B%0A%7D%0Aul%20%7B%0Amargin%2Dtop%3A%200%3B%0A%7D%0Aul%20li%20%7B%0Alist%2Dstyle%3A%20circle%20outside%3B%0A%7D%0Aul%20ul%20%7B%0Amargin%2Dbottom%3A%200%3B%0A%7D%0Apre%2C%20code%20%7B%0Abackground%2Dcolor%3A%20%23f7f7f7%3B%0Aborder%2Dradius%3A%203px%3B%0Acolor%3A%20%23333%3B%0Awhite%2Dspace%3A%20pre%2Dwrap%3B%20%0A%7D%0Apre%20%7B%0Aborder%2Dradius%3A%203px%3B%0Amargin%3A%205px%200px%2010px%200px%3B%0Apadding%3A%2010px%3B%0A%7D%0Apre%3Anot%28%5Bclass%5D%29%20%7B%0Abackground%2Dcolor%3A%20%23f7f7f7%3B%0A%7D%0Acode%20%7B%0Afont%2Dfamily%3A%20Consolas%2C%20Monaco%2C%20%27Courier%20New%27%2C%20monospace%3B%0Afont%2Dsize%3A%2085%25%3B%0A%7D%0Ap%20%3E%20code%2C%20li%20%3E%20code%20%7B%0Apadding%3A%202px%200px%3B%0A%7D%0Adiv%2Efigure%20%7B%0Atext%2Dalign%3A%20center%3B%0A%7D%0Aimg%20%7B%0Abackground%2Dcolor%3A%20%23FFFFFF%3B%0Apadding%3A%202px%3B%0Aborder%3A%201px%20solid%20%23DDDDDD%3B%0Aborder%2Dradius%3A%203px%3B%0Aborder%3A%201px%20solid%20%23CCCCCC%3B%0Amargin%3A%200%205px%3B%0A%7D%0Ah1%20%7B%0Amargin%2Dtop%3A%200%3B%0Afont%2Dsize%3A%2035px%3B%0Aline%2Dheight%3A%2040px%3B%0A%7D%0Ah2%20%7B%0Aborder%2Dbottom%3A%204px%20solid%20%23f7f7f7%3B%0Apadding%2Dtop%3A%2010px%3B%0Apadding%2Dbottom%3A%202px%3B%0Afont%2Dsize%3A%20145%25%3B%0A%7D%0Ah3%20%7B%0Aborder%2Dbottom%3A%202px%20solid%20%23f7f7f7%3B%0Apadding%2Dtop%3A%2010px%3B%0Afont%2Dsize%3A%20120%25%3B%0A%7D%0Ah4%20%7B%0Aborder%2Dbottom%3A%201px%20solid%20%23f7f7f7%3B%0Amargin%2Dleft%3A%208px%3B%0Afont%2Dsize%3A%20105%25%3B%0A%7D%0Ah5%2C%20h6%20%7B%0Aborder%2Dbottom%3A%201px%20solid%20%23ccc%3B%0Afont%2Dsize%3A%20105%25%3B%0A%7D%0Aa%20%7B%0Acolor%3A%20%230033dd%3B%0Atext%2Ddecoration%3A%20none%3B%0A%7D%0Aa%3Ahover%20%7B%0Acolor%3A%20%236666ff%3B%20%7D%0Aa%3Avisited%20%7B%0Acolor%3A%20%23800080%3B%20%7D%0Aa%3Avisited%3Ahover%20%7B%0Acolor%3A%20%23BB00BB%3B%20%7D%0Aa%5Bhref%5E%3D%22http%3A%22%5D%20%7B%0Atext%2Ddecoration%3A%20underline%3B%20%7D%0Aa%5Bhref%5E%3D%22https%3A%22%5D%20%7B%0Atext%2Ddecoration%3A%20underline%3B%20%7D%0A%0Acode%20%3E%20span%2Ekw%20%7B%20color%3A%20%23555%3B%20font%2Dweight%3A%20bold%3B%20%7D%20%0Acode%20%3E%20span%2Edt%20%7B%20color%3A%20%23902000%3B%20%7D%20%0Acode%20%3E%20span%2Edv%20%7B%20color%3A%20%2340a070%3B%20%7D%20%0Acode%20%3E%20span%2Ebn%20%7B%20color%3A%20%23d14%3B%20%7D%20%0Acode%20%3E%20span%2Efl%20%7B%20color%3A%20%23d14%3B%20%7D%20%0Acode%20%3E%20span%2Ech%20%7B%20color%3A%20%23d14%3B%20%7D%20%0Acode%20%3E%20span%2Est%20%7B%20color%3A%20%23d14%3B%20%7D%20%0Acode%20%3E%20span%2Eco%20%7B%20color%3A%20%23888888%3B%20font%2Dstyle%3A%20italic%3B%20%7D%20%0Acode%20%3E%20span%2Eot%20%7B%20color%3A%20%23007020%3B%20%7D%20%0Acode%20%3E%20span%2Eal%20%7B%20color%3A%20%23ff0000%3B%20font%2Dweight%3A%20bold%3B%20%7D%20%0Acode%20%3E%20span%2Efu%20%7B%20color%3A%20%23900%3B%20font%2Dweight%3A%20bold%3B%20%7D%20%20code%20%3E%20span%2Eer%20%7B%20color%3A%20%23a61717%3B%20background%2Dcolor%3A%20%23e3d2d2%3B%20%7D%20%0A" rel="stylesheet" type="text/css" />
 
 </head>
@@ -72,14 +74,11 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 
 
 
-<div class="fluid-row" id="header">
 
-
-<h1 class="title">02 Building modules in <code>SpaDES</code></h1>
+<h1 class="title toc-ignore">02 Building modules in <code>SpaDES</code></h1>
 <h4 class="author"><em>Alex M. Chubaty</em></h4>
-<h4 class="date"><em>April 20 2016</em></h4>
+<h4 class="date"><em>June 24 2016</em></h4>
 
-</div>
 
 <div id="TOC">
 <ul>
@@ -184,113 +183,113 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <div id="defining-module-metadata-definemodule" class="section level4">
 <h4><span class="header-section-number">2.2.1.1</span> Defining module metadata: <code>defineModule()</code></h4>
 <p>Every module requires complete metadata, structured as a named list, and passed as an argument to the <code>defineModule</code> function.</p>
-<table style="width:101%;">
+<table>
 <colgroup>
 <col width="31%"></col>
-<col width="69%"></col>
+<col width="68%"></col>
 </colgroup>
 <thead>
 <tr class="header">
-<th align="left"><strong>Element name</strong></th>
-<th align="left"><strong>Description</strong></th>
+<th><strong>Element name</strong></th>
+<th><strong>Description</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><strong><code>name</code></strong></td>
-<td align="left">Name of the module as a character string.</td>
+<td><strong><code>name</code></strong></td>
+<td>Name of the module as a character string.</td>
 </tr>
 <tr class="even">
-<td align="left"><strong><code>description</code></strong></td>
-<td align="left">Description of the module as a character string.</td>
+<td><strong><code>description</code></strong></td>
+<td>Description of the module as a character string.</td>
 </tr>
 <tr class="odd">
-<td align="left"><strong><code>keywords</code></strong></td>
-<td align="left">Character vector containing a module’s keywords.</td>
+<td><strong><code>keywords</code></strong></td>
+<td>Character vector containing a module’s keywords.</td>
 </tr>
 <tr class="even">
-<td align="left"><strong><code>childModules</code></strong></td>
-<td align="left">Character vector containing the names of the child modules that are part of this module.</td>
+<td><strong><code>childModules</code></strong></td>
+<td>Character vector containing the names of the child modules that are part of this module.</td>
 </tr>
 <tr class="odd">
-<td align="left"><strong><code>authors</code></strong></td>
-<td align="left">The author(s) of the module as a <code>person</code> object.</td>
+<td><strong><code>authors</code></strong></td>
+<td>The author(s) of the module as a <code>person</code> object.</td>
 </tr>
 <tr class="even">
-<td align="left"><strong><code>version</code></strong></td>
-<td align="left">The module version as a character, numeric, or <code>numeric_version</code>. <a href="http://semver.org/">Semantic versioning</a> is assumed.</td>
+<td><strong><code>version</code></strong></td>
+<td>The module version as a character, numeric, or <code>numeric_version</code>. <a href="http://semver.org/">Semantic versioning</a> is assumed.</td>
 </tr>
 <tr class="odd">
-<td align="left"><strong><code>spatialExtent</code></strong></td>
-<td align="left">Specifies the module’s spatial extent as an <code>Extent</code> object.</td>
+<td><strong><code>spatialExtent</code></strong></td>
+<td>Specifies the module’s spatial extent as an <code>Extent</code> object.</td>
 </tr>
 <tr class="even">
-<td align="left"><strong><code>timeframe</code></strong></td>
-<td align="left">Specifies the valid timeframe for which the module was designed to simulate.</td>
+<td><strong><code>timeframe</code></strong></td>
+<td>Specifies the valid timeframe for which the module was designed to simulate.</td>
 </tr>
 <tr class="odd">
-<td align="left"> </td>
-<td align="left">Must be a <code>POSIXt</code> object of length <code>2</code>, specifying the start and end times.</td>
+<td> </td>
+<td>Must be a <code>POSIXt</code> object of length <code>2</code>, specifying the start and end times.</td>
 </tr>
 <tr class="even">
-<td align="left"> </td>
-<td align="left">(NOT YET FULLY IMPLEMENTED.)</td>
+<td> </td>
+<td>(NOT YET FULLY IMPLEMENTED.)</td>
 </tr>
 <tr class="odd">
-<td align="left"><strong><code>timeunit</code></strong></td>
-<td align="left">Describes the unit of time corresponding to <code>1.0</code> simulation time units.</td>
+<td><strong><code>timeunit</code></strong></td>
+<td>Describes the unit of time corresponding to <code>1.0</code> simulation time units.</td>
 </tr>
 <tr class="even">
-<td align="left"><strong><code>citation</code></strong></td>
-<td align="left">A list of citations for the module, as a character strings.</td>
+<td><strong><code>citation</code></strong></td>
+<td>A list of citations for the module, as a character strings.</td>
 </tr>
 <tr class="odd">
-<td align="left"> </td>
-<td align="left">Alternatively, the name of a  or similar file.</td>
+<td> </td>
+<td>Alternatively, the name of a  or similar file.</td>
 </tr>
 <tr class="even">
-<td align="left"><strong><code>documentation</code></strong></td>
-<td align="left">List of filenames refering to module documentation sources.</td>
+<td><strong><code>documentation</code></strong></td>
+<td>List of filenames refering to module documentation sources.</td>
 </tr>
 <tr class="odd">
-<td align="left"><strong><code>reqdPkgs</code></strong></td>
-<td align="left">Character vector of R package names to be loaded.</td>
+<td><strong><code>reqdPkgs</code></strong></td>
+<td>Character vector of R package names to be loaded.</td>
 </tr>
 <tr class="even">
-<td align="left"><strong><code>parameters</code></strong></td>
-<td align="left">A <code>data.frame</code> constructed using <code>rbind</code> with <code>defineParameter</code>, specifying module</td>
+<td><strong><code>parameters</code></strong></td>
+<td>A <code>data.frame</code> constructed using <code>rbind</code> with <code>defineParameter</code>, specifying module</td>
 </tr>
 <tr class="odd">
-<td align="left"> </td>
-<td align="left">parameters, with columns <code>paramName</code>, <code>paramClass</code>, <code>default</code>, <code>min</code>, <code>max</code>, and <code>paramDesc</code>.</td>
+<td> </td>
+<td>parameters, with columns <code>paramName</code>, <code>paramClass</code>, <code>default</code>, <code>min</code>, <code>max</code>, and <code>paramDesc</code>.</td>
 </tr>
 <tr class="even">
-<td align="left"> </td>
-<td align="left">Default values may be overridden by the user by passing a list of parameters to <code>simInit</code>.</td>
+<td> </td>
+<td>Default values may be overridden by the user by passing a list of parameters to <code>simInit</code>.</td>
 </tr>
 <tr class="odd">
-<td align="left"><strong><code>inputObjects</code></strong></td>
-<td align="left">A <code>data.frame</code> specifying the object dependencies of the module, with columns</td>
+<td><strong><code>inputObjects</code></strong></td>
+<td>A <code>data.frame</code> specifying the object dependencies of the module, with columns</td>
 </tr>
 <tr class="even">
-<td align="left"> </td>
-<td align="left"><code>objectName</code>, <code>objectClass</code>, <code>sourceURL</code>, and <code>other</code>.</td>
+<td> </td>
+<td><code>objectName</code>, <code>objectClass</code>, <code>sourceURL</code>, and <code>other</code>.</td>
 </tr>
 <tr class="odd">
-<td align="left"> </td>
-<td align="left">For objects that are used within the module as both an input and an output,</td>
+<td> </td>
+<td>For objects that are used within the module as both an input and an output,</td>
 </tr>
 <tr class="even">
-<td align="left"> </td>
-<td align="left">add the object to each of these <code>data.frame</code>s.</td>
+<td> </td>
+<td>add the object to each of these <code>data.frame</code>s.</td>
 </tr>
 <tr class="odd">
-<td align="left"><strong><code>outputObjects</code></strong></td>
-<td align="left">A <code>data.frame</code> specifying the objects output by the module, with columns</td>
+<td><strong><code>outputObjects</code></strong></td>
+<td>A <code>data.frame</code> specifying the objects output by the module, with columns</td>
 </tr>
 <tr class="even">
-<td align="left"> </td>
-<td align="left"><code>objectName</code>, <code>objectClass</code>, and <code>other</code>.</td>
+<td> </td>
+<td><code>objectName</code>, <code>objectClass</code>, and <code>other</code>.</td>
 </tr>
 </tbody>
 </table>
@@ -463,8 +462,8 @@ randomLandscapesInit &lt;-<span class="st"> </span>function(sim) {
 
 <span class="co"># overview of the events in the simulation</span>
 <span class="kw">eventDiagram</span>(mySim, <span class="st">&quot;0000-06-01&quot;</span>, <span class="dt">n =</span> <span class="dv">200</span>, <span class="dt">width =</span> <span class="dv">720</span>)</code></pre></div>
-<p><div id="htmlwidget-2905" style="width:720px;height:1612px;" class="DiagrammeR html-widget"></div>
-<script type="application/json" data-for="htmlwidget-2905">{"x":{"diagram":"gantt\ndateFormat  YYYY-MM-DD\ntitle SpaDES event diagram\nsection  checkpoint \n init:done,checkpoint1,0-06-01,0-06-07\nsection  save \n init:done,save1,0-06-01,0-06-07\nsection  load \n init:done,load1,0-06-01,0-06-07\nsection  randomLandscapes \n init:done,randomLandscapes1,0-06-01,0-06-07\nplot:crit,randomLandscapes2,0-06-01,0-06-07\nsection  caribouMovement \n init:done,caribouMovement1,0-06-01,0-06-07\nmove:active,caribouMovement2,0-07-01,0-07-07\nplot.init:active,caribouMovement3,0-07-01,0-07-07\nmove:active,caribouMovement4,0-07-31,0-08-07\nplot:crit,caribouMovement5,0-07-31,0-08-07\nmove:active,caribouMovement6,0-08-31,0-09-06\nplot:crit,caribouMovement7,0-08-31,0-09-06\nmove:active,caribouMovement8,0-09-30,0-10-07\nplot:crit,caribouMovement9,0-09-30,0-10-07\nmove:active,caribouMovement10,0-10-31,0-11-06\nplot:crit,caribouMovement11,0-10-31,0-11-06\nmove:active,caribouMovement12,0-11-30,0-12-06\nplot:crit,caribouMovement13,0-11-30,0-12-06\nmove:active,caribouMovement14,0-12-31,1-01-06\nplot:crit,caribouMovement15,0-12-31,1-01-06\nmove:active,caribouMovement16,1-01-30,1-02-05\nplot:crit,caribouMovement17,1-01-30,1-02-05\nmove:active,caribouMovement18,1-03-01,1-03-08\nplot:crit,caribouMovement19,1-03-01,1-03-08\nmove:active,caribouMovement20,1-04-01,1-04-07\nplot:crit,caribouMovement21,1-04-01,1-04-07\nmove:active,caribouMovement22,1-05-01,1-05-08\nplot:crit,caribouMovement23,1-05-01,1-05-08\nmove:active,caribouMovement24,1-06-01,1-06-07\nplot:crit,caribouMovement25,1-06-01,1-06-07\nmove:active,caribouMovement26,1-07-01,1-07-07\nplot:crit,caribouMovement27,1-07-01,1-07-07\nmove:active,caribouMovement28,1-08-01,1-08-07\nplot:crit,caribouMovement29,1-08-01,1-08-07\nmove:active,caribouMovement30,1-08-31,1-09-06\nplot:crit,caribouMovement31,1-08-31,1-09-06\nmove:active,caribouMovement32,1-10-01,1-10-07\nplot:crit,caribouMovement33,1-10-01,1-10-07\nmove:active,caribouMovement34,1-10-31,1-11-06\nplot:crit,caribouMovement35,1-10-31,1-11-06\nmove:active,caribouMovement36,1-11-30,1-12-07\nplot:crit,caribouMovement37,1-11-30,1-12-07\nmove:active,caribouMovement38,1-12-31,2-01-06\nplot:crit,caribouMovement39,1-12-31,2-01-06\nmove:active,caribouMovement40,2-01-30,2-02-06\nplot:crit,caribouMovement41,2-01-30,2-02-06\nmove:active,caribouMovement42,2-03-02,2-03-08\nplot:crit,caribouMovement43,2-03-02,2-03-08\nmove:active,caribouMovement44,2-04-01,2-04-07\nplot:crit,caribouMovement45,2-04-01,2-04-07\nmove:active,caribouMovement46,2-05-02,2-05-08\nplot:crit,caribouMovement47,2-05-02,2-05-08\nmove:active,caribouMovement48,2-06-01,2-06-07\nplot:crit,caribouMovement49,2-06-01,2-06-07\nsection  fireSpread \n init:done,fireSpread1,0-06-01,0-06-07\nburn:active,fireSpread2,0-06-01,0-06-07\nstats:active,fireSpread3,0-06-01,0-06-07\nplot.init:active,fireSpread4,0-06-01,0-06-07\nburn:active,fireSpread5,1-06-01,1-06-07\nstats:active,fireSpread6,1-06-01,1-06-07\nburn:active,fireSpread7,2-06-01,2-06-07\nstats:active,fireSpread8,2-06-01,2-06-07\n"},"evals":[],"jsHooks":[]}</script></p>
+<div id="htmlwidget-9122" style="width:720px;height:1612px;" class="DiagrammeR html-widget"></div>
+<script type="application/json" data-for="htmlwidget-9122">{"x":{"diagram":"gantt\ndateFormat  YYYY-MM-DD\ntitle SpaDES event diagram\nsection  checkpoint \n init:done,checkpoint1,0000-06-01,0000-06-07\nsection  save \n init:done,save1,0000-06-01,0000-06-07\nsection  load \n init:done,load1,0000-06-01,0000-06-07\nsection  randomLandscapes \n init:done,randomLandscapes1,0000-06-01,0000-06-07\nplot:crit,randomLandscapes2,0000-06-01,0000-06-07\nsection  caribouMovement \n init:done,caribouMovement1,0000-06-01,0000-06-07\nmove:active,caribouMovement2,0000-07-01,0000-07-07\nplot.init:active,caribouMovement3,0000-07-01,0000-07-07\nmove:active,caribouMovement4,0000-07-31,0000-08-07\nplot:crit,caribouMovement5,0000-07-31,0000-08-07\nmove:active,caribouMovement6,0000-08-31,0000-09-06\nplot:crit,caribouMovement7,0000-08-31,0000-09-06\nmove:active,caribouMovement8,0000-09-30,0000-10-07\nplot:crit,caribouMovement9,0000-09-30,0000-10-07\nmove:active,caribouMovement10,0000-10-31,0000-11-06\nplot:crit,caribouMovement11,0000-10-31,0000-11-06\nmove:active,caribouMovement12,0000-11-30,0000-12-06\nplot:crit,caribouMovement13,0000-11-30,0000-12-06\nmove:active,caribouMovement14,0000-12-31,0001-01-06\nplot:crit,caribouMovement15,0000-12-31,0001-01-06\nmove:active,caribouMovement16,0001-01-30,0001-02-05\nplot:crit,caribouMovement17,0001-01-30,0001-02-05\nmove:active,caribouMovement18,0001-03-01,0001-03-08\nplot:crit,caribouMovement19,0001-03-01,0001-03-08\nmove:active,caribouMovement20,0001-04-01,0001-04-07\nplot:crit,caribouMovement21,0001-04-01,0001-04-07\nmove:active,caribouMovement22,0001-05-01,0001-05-08\nplot:crit,caribouMovement23,0001-05-01,0001-05-08\nmove:active,caribouMovement24,0001-06-01,0001-06-07\nplot:crit,caribouMovement25,0001-06-01,0001-06-07\nmove:active,caribouMovement26,0001-07-01,0001-07-07\nplot:crit,caribouMovement27,0001-07-01,0001-07-07\nmove:active,caribouMovement28,0001-08-01,0001-08-07\nplot:crit,caribouMovement29,0001-08-01,0001-08-07\nmove:active,caribouMovement30,0001-08-31,0001-09-06\nplot:crit,caribouMovement31,0001-08-31,0001-09-06\nmove:active,caribouMovement32,0001-10-01,0001-10-07\nplot:crit,caribouMovement33,0001-10-01,0001-10-07\nmove:active,caribouMovement34,0001-10-31,0001-11-06\nplot:crit,caribouMovement35,0001-10-31,0001-11-06\nmove:active,caribouMovement36,0001-11-30,0001-12-07\nplot:crit,caribouMovement37,0001-11-30,0001-12-07\nmove:active,caribouMovement38,0001-12-31,0002-01-06\nplot:crit,caribouMovement39,0001-12-31,0002-01-06\nmove:active,caribouMovement40,0002-01-30,0002-02-06\nplot:crit,caribouMovement41,0002-01-30,0002-02-06\nmove:active,caribouMovement42,0002-03-02,0002-03-08\nplot:crit,caribouMovement43,0002-03-02,0002-03-08\nmove:active,caribouMovement44,0002-04-01,0002-04-07\nplot:crit,caribouMovement45,0002-04-01,0002-04-07\nmove:active,caribouMovement46,0002-05-02,0002-05-08\nplot:crit,caribouMovement47,0002-05-02,0002-05-08\nmove:active,caribouMovement48,0002-06-01,0002-06-07\nplot:crit,caribouMovement49,0002-06-01,0002-06-07\nsection  fireSpread \n init:done,fireSpread1,0000-06-01,0000-06-07\nburn:active,fireSpread2,0000-06-01,0000-06-07\nstats:active,fireSpread3,0000-06-01,0000-06-07\nplot.init:active,fireSpread4,0000-06-01,0000-06-07\nburn:active,fireSpread5,0001-06-01,0001-06-07\nstats:active,fireSpread6,0001-06-01,0001-06-07\nburn:active,fireSpread7,0002-06-01,0002-06-07\nstats:active,fireSpread8,0002-06-01,0002-06-07\n"},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 <div id="module-documentation-modulename.rmd" class="section level2">
@@ -534,11 +533,11 @@ mySim &lt;-<span class="st"> </span><span class="kw">simInit</span>(<span class=
 ## 6: randomLandscapes caribouMovement     landscape RasterStack
 ## 7: randomLandscapes      fireSpread     landscape RasterStack</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">moduleDiagram</span>(mySim)            <span class="co"># simplified visual representation of modules</span></code></pre></div>
-<p><img src="data:image/png;base64,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JPgFBLhv2ZInl8vefffOlBRtbm5jR8fAZ5/VWCz2X/0qzd3d5dzb+b33zrzxRpHZbH322cOuropVq9Kys2sPH2549NHUY8f6v/jCGBiotFjsn39ufOIJrZvb0Pbt+/v77aWl1h/8IO7hh2d6e3vfcEPoxo0n77//w/XrF0yd6j59+tT9+z96c8vq390z7ZNT1031abslVfHWnqTw8L9u337fwoWB69fvzcxsHN7sM89E+Pp65OYajUbrkSPtixd7/vjH6bGxscP39e7dZb/5TZpCoRBCtLX1//GPhyIjvRsa+nJzG8fyHyQwegg8JpH+fsvy5bt27LgzOFhz550x8fGv3nlnzLx5Ifff/+G+fctvvDGsp2dw1aqso0cfWLAgfOXKz4qK2t98c8n06VNNJsvzzx+prOweDvy+fTXbty9et+6m++778I473jtz5gdqtfKmm95+660lM2cGCiFWrfpswYK3T5367v3361evznFc6667Yv7xD8N5Uz355JydO8+88MLR5ubmYD/xevac7y44KP5zGBnsJyor6956y75qlX9UlEoIsW1b5y9/Wfz880EpKeqlS7127erx8pILITw95Tfc4BEf72o02l5+ueP3v5+qUsnlcssDD2R2dOSHhqrq6hqPHBmaO9f485+7bd7s8u1vf/D44yEPPuiVkuL/29+eSE3t8/JSPv109YsvxioUsr4+5QMPZJrNlZGRHhUVzWfONP/5zwlbtyY9/PDpxx776Nln9SEhwt1dFh+vWLLErbTUIJfL5XK5QqGQyWRyuTw1VVFV5fX++7IHHwySy+XZ2UV//OPJ2lrjQw+FJie7vfZaZ3390MqV/pGRKg8P+ebNHb///VSFQpaZ2fub35xUKJqioz2XLPHo7g775z9L9uyp+POf07/73ZS33tqy+l6RHle89oNv1rX7vvaL1x5f9tG0Xyy7994P1q8PCg9XlJebm5vtr7xy0/Ll9jlzgr///Y+zsr6tVMrXrTv+2GPZcXEFcrnruff1b35z4OhRncViu+WWHZs23TJnTpAQ4s47d7a08C55SAGBxyTy7rulfn7q4GCNECIqyru5+ae+vm4ymTh0aMWMGVObm01nznQ5HnPWaFwCAtxnzgxMTvZPTvYXQhw+3FBZ2T28qW9+MzoiwksIsWHDgmnTXtuzp1IulzU3G9PSAh0rrFyZtmHD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" alt /></p>
+<p><img src="data:image/png;base64,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" /><!-- --></p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># detailed visual representation of objects</span>
 <span class="kw">objectDiagram</span>(mySim, <span class="dt">width =</span> <span class="dv">720</span>)</code></pre></div>
-<p><div id="htmlwidget-6658" style="width:720px;height:288px;" class="DiagrammeR html-widget"></div>
-<script type="application/json" data-for="htmlwidget-6658">{"x":{"diagram":"sequenceDiagram\ncaribouMovement ->> caribouMovement : landscape\ncaribouMovement ->> fireSpread : landscape\nfireSpread ->> caribouMovement : landscape\nfireSpread ->> fireSpread : landscape\nfireSpread ->> fireSpread : nPixelsBurned\nrandomLandscapes ->> caribouMovement : landscape\nrandomLandscapes ->> fireSpread : landscape\n"},"evals":[],"jsHooks":[]}</script></p>
+<div id="htmlwidget-2358" style="width:720px;height:288px;" class="DiagrammeR html-widget"></div>
+<script type="application/json" data-for="htmlwidget-2358">{"x":{"diagram":"sequenceDiagram\ncaribouMovement ->> caribouMovement : landscape\ncaribouMovement ->> fireSpread : landscape\nfireSpread ->> caribouMovement : landscape\nfireSpread ->> fireSpread : landscape\nfireSpread ->> fireSpread : nPixelsBurned\nrandomLandscapes ->> caribouMovement : landscape\nrandomLandscapes ->> fireSpread : landscape\n"},"evals":[],"jsHooks":[]}</script>
 <p>The output of the <code>depsEdgeList</code> is an edgelist describing the relationships between each module. In the example above, line 2 of the output indicates that the <code>fireSpread</code> module relies on an object <code>landscape</code> provided by the <code>caribouMovement</code> module. This edgelist is used inside the <code>depsGraph</code> function to produce a dependency graph (network), where each module corresponds to a vertex (node), and object dependencies are denoted by the arrows. When plotting the dependency graph, it’s often useful to use the <code>plot=TRUE</code> argument to simplify the network by showing no more than one object dependency between modules.</p>
 </div>
 </div>
@@ -546,104 +545,104 @@ mySim &lt;-<span class="st"> </span><span class="kw">simInit</span>(<span class=
 <h1><span class="header-section-number">4</span> Core modules</h1>
 <p>There are a number of built-in modules that provide useful functionality such as plotting and saving. These modules have their names prefaced with a dot (<code>.</code>). Parameter values for core modules can be accessed by using their accessor methods; however, these are simply entries in a nested list exactly like the parameters passed to user modules, and can be accessed directly as such.</p>
 <p>These core modules are summarized in the following table and described further below.</p>
-<table style="width:114%;">
+<table>
 <colgroup>
+<col width="23%"></col>
+<col width="50%"></col>
 <col width="26%"></col>
-<col width="56%"></col>
-<col width="30%"></col>
 </colgroup>
 <thead>
 <tr class="header">
-<th align="left"><strong>Module Name</strong></th>
-<th align="left"><strong>Parameterization</strong></th>
-<th align="left"><strong>Accessor Methods</strong></th>
+<th><strong>Module Name</strong></th>
+<th><strong>Parameterization</strong></th>
+<th><strong>Accessor Methods</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><strong><code>.checkpoint</code></strong></td>
-<td align="left"><code>file</code>: character.</td>
-<td align="left"><code>checkpointFile()</code></td>
+<td><strong><code>.checkpoint</code></strong></td>
+<td><code>file</code>: character.</td>
+<td><code>checkpointFile()</code></td>
 </tr>
 <tr class="even">
-<td align="left"> </td>
-<td align="left"><code>interval</code>: numeric (or <code>NA</code>).</td>
-<td align="left"><code>checkpointInterval()</code></td>
+<td> </td>
+<td><code>interval</code>: numeric (or <code>NA</code>).</td>
+<td><code>checkpointInterval()</code></td>
 </tr>
 <tr class="odd">
-<td align="left"> </td>
-<td align="left"> </td>
-<td align="left"> </td>
+<td> </td>
+<td> </td>
+<td> </td>
 </tr>
 <tr class="even">
-<td align="left"><strong><code>.plot</code></strong></td>
-<td align="left"><code>.plotInitialTime</code>: numeric (or <code>NA</code>)</td>
-<td align="left">as list item in your module parameters.</td>
+<td><strong><code>.plot</code></strong></td>
+<td><code>.plotInitialTime</code>: numeric (or <code>NA</code>)</td>
+<td>as list item in your module parameters.</td>
 </tr>
 <tr class="odd">
-<td align="left"> </td>
-<td align="left"><code>.plotInterval</code>: numeric (or <code>NA</code>)</td>
-<td align="left">as list item in your module parameters.</td>
+<td> </td>
+<td><code>.plotInterval</code>: numeric (or <code>NA</code>)</td>
+<td>as list item in your module parameters.</td>
 </tr>
 <tr class="even">
-<td align="left"> </td>
-<td align="left"> </td>
-<td align="left"> </td>
+<td> </td>
+<td> </td>
+<td> </td>
 </tr>
 <tr class="odd">
-<td align="left"><strong><code>.progress</code></strong></td>
-<td align="left"><code>type</code>: one of <code>&quot;text&quot;</code>, <code>&quot;graphical&quot;</code>,</td>
-<td align="left"><code>progressType()</code></td>
+<td><strong><code>.progress</code></strong></td>
+<td><code>type</code>: one of <code>&quot;text&quot;</code>, <code>&quot;graphical&quot;</code>,</td>
+<td><code>progressType()</code></td>
 </tr>
 <tr class="even">
-<td align="left"> </td>
-<td align="left"><code>&quot;shiny&quot;</code>, or <code>NA</code>.</td>
-<td align="left"> </td>
+<td> </td>
+<td><code>&quot;shiny&quot;</code>, or <code>NA</code>.</td>
+<td> </td>
 </tr>
 <tr class="odd">
-<td align="left"> </td>
-<td align="left"><code>interval</code>: numeric (or <code>NA</code>).</td>
-<td align="left"><code>progressInterval()</code></td>
+<td> </td>
+<td><code>interval</code>: numeric (or <code>NA</code>).</td>
+<td><code>progressInterval()</code></td>
 </tr>
 <tr class="even">
-<td align="left"> </td>
-<td align="left"> </td>
-<td align="left"> </td>
+<td> </td>
+<td> </td>
+<td> </td>
 </tr>
 <tr class="odd">
-<td align="left"><strong><code>.load</code></strong></td>
-<td align="left"><code>inputs</code>: data.frame</td>
-<td align="left"><code>inputs()</code> or passed as <code>inputs</code> argument to <code>simList</code></td>
+<td><strong><code>.load</code></strong></td>
+<td><code>inputs</code>: data.frame</td>
+<td><code>inputs()</code> or passed as <code>inputs</code> argument to <code>simList</code></td>
 </tr>
 <tr class="even">
-<td align="left"> </td>
-<td align="left"> </td>
-<td align="left"> </td>
+<td> </td>
+<td> </td>
+<td> </td>
 </tr>
 <tr class="odd">
-<td align="left"><strong><code>.save</code></strong></td>
-<td align="left"><code>ouputs</code>: data.frame</td>
-<td align="left"><code>outputs()</code> or passed as <code>outputs</code> argument to <code>simList</code></td>
+<td><strong><code>.save</code></strong></td>
+<td><code>ouputs</code>: data.frame</td>
+<td><code>outputs()</code> or passed as <code>outputs</code> argument to <code>simList</code></td>
 </tr>
 <tr class="even">
-<td align="left"> </td>
-<td align="left"><code>.saveInitialTime</code>: numeric (or <code>NA</code>)</td>
-<td align="left">as list item in your module parameters.</td>
+<td> </td>
+<td><code>.saveInitialTime</code>: numeric (or <code>NA</code>)</td>
+<td>as list item in your module parameters.</td>
 </tr>
 <tr class="odd">
-<td align="left"> </td>
-<td align="left"><code>.saveInterval</code>: numeric (or <code>NA</code>)</td>
-<td align="left">as list item in your module parameters.</td>
+<td> </td>
+<td><code>.saveInterval</code>: numeric (or <code>NA</code>)</td>
+<td>as list item in your module parameters.</td>
 </tr>
 <tr class="even">
-<td align="left"> </td>
-<td align="left"><code>.saveObjects</code>: character.</td>
-<td align="left">as list item in your module parameters.</td>
+<td> </td>
+<td><code>.saveObjects</code>: character.</td>
+<td>as list item in your module parameters.</td>
 </tr>
 <tr class="odd">
-<td align="left"> </td>
-<td align="left"><code>.savePath</code>: character.</td>
-<td align="left">as list item in your module parameters.</td>
+<td> </td>
+<td><code>.savePath</code>: character.</td>
+<td>as list item in your module parameters.</td>
 </tr>
 </tbody>
 </table>
@@ -651,17 +650,17 @@ mySim &lt;-<span class="st"> </span><span class="kw">simInit</span>(<span class=
 <h2><span class="header-section-number">4.1</span> <code>.checkpoint</code> module</h2>
 <p>Schedule automatic simulation checkpointing to allow you to resume a previously saved simulation. All objects in the global environment including the state of the random number generator are saved and can be reloaded. Checkpoint frequency and filename can be passed as parameters to the simulation object as illustrated below. By befault, checkpointing is not used unless the <code>interval</code> parameter is provided; the simulation checkpoint file (if one exists) is loaded if the <code>file</code> parameter is specified.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># initialize a new simulation, setting the checkpoint interval and filename.</span>
-times &lt;-<span class="st"> </span><span class="kw">list</span>(<span class="dt">start=</span><span class="dv">0</span>, <span class="dt">end=</span><span class="dv">30</span>)
+times &lt;-<span class="st"> </span><span class="kw">list</span>(<span class="dt">start =</span> <span class="dv">0</span>, <span class="dt">end =</span> <span class="dv">30</span>)
 parameters &lt;-<span class="st"> </span><span class="kw">list</span>(
   <span class="dt">.globals =</span> <span class="kw">list</span>(<span class="dt">stackName =</span> <span class="st">&quot;landscape&quot;</span>),
   <span class="dt">.checkpoint =</span> <span class="kw">list</span>(<span class="dt">interval =</span> <span class="dv">10</span>, <span class="dt">file =</span> <span class="st">&quot;chkpnt.RData&quot;</span>)
 )
 modules &lt;-<span class="st"> </span><span class="kw">list</span>(<span class="st">&quot;randomLandscapes&quot;</span>, <span class="st">&quot;caribouMovement&quot;</span>)
 paths &lt;-<span class="st"> </span><span class="kw">list</span>(
-  <span class="dt">modulePath =</span> <span class="kw">system.file</span>(<span class="st">&quot;sampleModules&quot;</span>, <span class="dt">package=</span><span class="st">&quot;SpaDES&quot;</span>)
+  <span class="dt">modulePath =</span> <span class="kw">system.file</span>(<span class="st">&quot;sampleModules&quot;</span>, <span class="dt">package =</span> <span class="st">&quot;SpaDES&quot;</span>)
 )
 
-mySim &lt;-<span class="st"> </span><span class="kw">simInit</span>(<span class="dt">times=</span>times, <span class="dt">params=</span>parameters, <span class="dt">modules=</span>modules, <span class="dt">paths=</span>paths)
+mySim &lt;-<span class="st"> </span><span class="kw">simInit</span>(<span class="dt">times =</span> times, <span class="dt">params =</span> parameters, <span class="dt">modules =</span> modules, <span class="dt">paths =</span> paths)
 
 <span class="co"># retrieve the checkpoint params from the simulation object</span>
 <span class="kw">checkpointFile</span>(mySim)</code></pre></div>
@@ -688,106 +687,106 @@ mySim &lt;-<span class="st"> </span><span class="kw">simInit</span>(<span class=
 <div id="load-and-.save-modules" class="section level2">
 <h2><span class="header-section-number">4.3</span> <code>.load</code> and <code>.save</code> modules</h2>
 <p>Schedule object save and file load events by passing parameters to the save and load parameters for each module. Saving objects to file can be done at the module level or at the model level. At the module level, each module can be provided with appropriate arguments as parameters. In all cases, these must be events that are scheduled in the modules that do the saving or loading, and then the parameters necessary to make those events happen must be specified. Modules are not required to have the following parameters set, but when using <code>newModule()</code> to create the module, these will be events that are made, but not scheduled:</p>
-<table style="width:112%;">
+<table>
 <colgroup>
-<col width="34%"></col>
-<col width="77%"></col>
+<col width="30%"></col>
+<col width="69%"></col>
 </colgroup>
 <thead>
 <tr class="header">
-<th align="left"><strong>Argument</strong></th>
-<th align="left"><strong>Description</strong></th>
+<th><strong>Argument</strong></th>
+<th><strong>Description</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><strong><code>.saveInitialTime</code></strong></td>
-<td align="left">Numeric specifying the time at which the first save is scheduled (between <code>start(sim)</code> and <code>end(sim)</code>).</td>
+<td><strong><code>.saveInitialTime</code></strong></td>
+<td>Numeric specifying the time at which the first save is scheduled (between <code>start(sim)</code> and <code>end(sim)</code>).</td>
 </tr>
 <tr class="even">
-<td align="left"><strong><code>.saveInterval</code></strong></td>
-<td align="left">Numeric specifying the interval at which objects will be saved.</td>
+<td><strong><code>.saveInterval</code></strong></td>
+<td>Numeric specifying the interval at which objects will be saved.</td>
 </tr>
 <tr class="odd">
-<td align="left"> </td>
-<td align="left">Used to schedule save events.</td>
+<td> </td>
+<td>Used to schedule save events.</td>
 </tr>
 <tr class="even">
-<td align="left"><strong><code>.saveObjects</code></strong></td>
-<td align="left">Character vector naming the objects to be saved.</td>
+<td><strong><code>.saveObjects</code></strong></td>
+<td>Character vector naming the objects to be saved.</td>
 </tr>
 </tbody>
 </table>
 <div id="inputs-argument-to-siminit" class="section level3">
 <h3><span class="header-section-number">4.3.1</span> <code>inputs</code> argument to simInit</h3>
 <p>Alternatively, objects can be read in during the <code>simInit</code> function call by passing a data.frame to the <code>input</code> argument. For <code>inputs()</code>, the <code>data.frame</code> must consist of, minimally, a column named <code>file</code> listing the absolute or relative filepaths of the files to be loaded. Additional columns can also be provided:</p>
-<table style="width:112%;">
+<table>
 <colgroup>
-<col width="23%"></col>
-<col width="88%"></col>
+<col width="20%"></col>
+<col width="79%"></col>
 </colgroup>
 <thead>
 <tr class="header">
-<th align="left"><strong>Column Name</strong></th>
-<th align="left"><strong>Description</strong></th>
+<th><strong>Column Name</strong></th>
+<th><strong>Description</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><strong><code>file</code></strong></td>
-<td align="left">Character string indicating the absolute or relative file path to individual file to load.</td>
+<td><strong><code>file</code></strong></td>
+<td>Character string indicating the absolute or relative file path to individual file to load.</td>
 </tr>
 <tr class="even">
-<td align="left"><strong><code>objectName</code></strong></td>
-<td align="left">Character string indicating the name of the object once the file is loaded.</td>
+<td><strong><code>objectName</code></strong></td>
+<td>Character string indicating the name of the object once the file is loaded.</td>
 </tr>
 <tr class="odd">
-<td align="left"><strong><code>fun</code></strong></td>
-<td align="left">Character string indicating the function to be used to load the file. Can use <code>package::fun</code> notation.</td>
+<td><strong><code>fun</code></strong></td>
+<td>Character string indicating the function to be used to load the file. Can use <code>package::fun</code> notation.</td>
 </tr>
 <tr class="even">
-<td align="left"><strong><code>package</code></strong></td>
-<td align="left">Character string indicating the package to load the <code>fun</code> from. Not required if <code>fun</code> uses <code>package::fun</code> notation</td>
+<td><strong><code>package</code></strong></td>
+<td>Character string indicating the package to load the <code>fun</code> from. Not required if <code>fun</code> uses <code>package::fun</code> notation</td>
 </tr>
 <tr class="odd">
-<td align="left"><strong><code>intervals</code></strong></td>
-<td align="left">Numeric indicating the interval between repeated loading of the same file.</td>
+<td><strong><code>intervals</code></strong></td>
+<td>Numeric indicating the interval between repeated loading of the same file.</td>
 </tr>
 <tr class="even">
-<td align="left"> </td>
-<td align="left">This should be <code>NA</code> or the column absent if the file is only loaded once.</td>
+<td> </td>
+<td>This should be <code>NA</code> or the column absent if the file is only loaded once.</td>
 </tr>
 <tr class="odd">
-<td align="left"><strong><code>loadTime</code></strong></td>
-<td align="left">Numeric indicating when the file should be loaded. Defaults to <code>simTime = 0</code>, but this</td>
+<td><strong><code>loadTime</code></strong></td>
+<td>Numeric indicating when the file should be loaded. Defaults to <code>simTime = 0</code>, but this</td>
 </tr>
 <tr class="even">
-<td align="left"> </td>
-<td align="left">can be any time. The loading will be scheduled to occur at the <code>loadTime</code>.</td>
+<td> </td>
+<td>can be any time. The loading will be scheduled to occur at the <code>loadTime</code>.</td>
 </tr>
 <tr class="odd">
-<td align="left"> </td>
-<td align="left">If the same file is to be loaded many times, but not at a regular interval, then there</td>
+<td> </td>
+<td>If the same file is to be loaded many times, but not at a regular interval, then there</td>
 </tr>
 <tr class="even">
-<td align="left"> </td>
-<td align="left">should be separate line, with a unique <code>loadTime</code> for each.</td>
+<td> </td>
+<td>should be separate line, with a unique <code>loadTime</code> for each.</td>
 </tr>
 <tr class="odd">
-<td align="left"><strong><code>args</code></strong></td>
-<td align="left">List of lists of named arguments; one list for each loading function.</td>
+<td><strong><code>args</code></strong></td>
+<td>List of lists of named arguments; one list for each loading function.</td>
 </tr>
 <tr class="even">
-<td align="left"> </td>
-<td align="left">For example, if <code>raster</code> is a loading function, <code>args = list(native = TRUE)</code>.</td>
+<td> </td>
+<td>For example, if <code>raster</code> is a loading function, <code>args = list(native = TRUE)</code>.</td>
 </tr>
 <tr class="odd">
-<td align="left"> </td>
-<td align="left">If there is only one list, then it is assumed to apply to all load attempts and will be</td>
+<td> </td>
+<td>If there is only one list, then it is assumed to apply to all load attempts and will be</td>
 </tr>
 <tr class="even">
-<td align="left"> </td>
-<td align="left">repeated for each load function.</td>
+<td> </td>
+<td>repeated for each load function.</td>
 </tr>
 </tbody>
 </table>
@@ -796,37 +795,37 @@ mySim &lt;-<span class="st"> </span><span class="kw">simInit</span>(<span class=
 <h3><span class="header-section-number">4.3.2</span> <code>outputs</code> argument to simInit</h3>
 <p>Objects to be saved can be specified using the <code>output</code> argument, by passing a data.frame analogous to the <code>.load</code> module. This <code>data.frame</code> is passed via the <code>outputs</code> argument in the <code>simInit</code> call or via a <code>outputs(mySim) &lt;- data.frame()</code>.</p>
 <p>Saving files can be done “at the model level” by passing a simulation parameter called <code>outputs</code> which can be a <code>data.frame</code> and consists minimally of a column named <code>objectNames</code>. This will identify which objects should be saved. Additional columns can also be provided:</p>
-<table style="width:112%;">
+<table>
 <colgroup>
-<col width="23%"></col>
-<col width="88%"></col>
+<col width="20%"></col>
+<col width="79%"></col>
 </colgroup>
 <thead>
 <tr class="header">
-<th align="left"><strong>Column Name</strong></th>
-<th align="left"><strong>Description</strong></th>
+<th><strong>Column Name</strong></th>
+<th><strong>Description</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><strong><code>objectName</code></strong></td>
-<td align="left">Character string indicating the name of the object once the file is loaded.</td>
+<td><strong><code>objectName</code></strong></td>
+<td>Character string indicating the name of the object once the file is loaded.</td>
 </tr>
 <tr class="even">
-<td align="left"><strong><code>file</code></strong></td>
-<td align="left">Character string indicating the base name to use to name the saved file.</td>
+<td><strong><code>file</code></strong></td>
+<td>Character string indicating the base name to use to name the saved file.</td>
 </tr>
 <tr class="odd">
-<td align="left"><strong><code>fun</code></strong></td>
-<td align="left">Character string indicating the function to be used to save the file.</td>
+<td><strong><code>fun</code></strong></td>
+<td>Character string indicating the function to be used to save the file.</td>
 </tr>
 <tr class="even">
-<td align="left"><strong><code>package</code></strong></td>
-<td align="left">Character string indicating the package to find the previous <code>fun</code> in.</td>
+<td><strong><code>package</code></strong></td>
+<td>Character string indicating the package to find the previous <code>fun</code> in.</td>
 </tr>
 <tr class="odd">
-<td align="left"><strong><code>saveTime</code></strong></td>
-<td align="left">Numeric indicating when the file should be saved. Defaults to <code>end(simList)</code>, but this can be any time. For multiple saves of the same object, use unique lines, e.g., via <code>data.table(expand.grid(objectName = c(&quot;caribou&quot;, &quot;veg&quot;), saveTime = 1:10))</code></td>
+<td><strong><code>saveTime</code></strong></td>
+<td>Numeric indicating when the file should be saved. Defaults to <code>end(simList)</code>, but this can be any time. For multiple saves of the same object, use unique lines, e.g., via <code>data.table(expand.grid(objectName = c(&quot;caribou&quot;, &quot;veg&quot;), saveTime = 1:10))</code></td>
 </tr>
 </tbody>
 </table>
@@ -857,8 +856,8 @@ mySim &lt;-<span class="st"> </span><span class="kw">simInit</span>(<span class=
 ## [7] arguments  intervals 
 ## &lt;0 rows&gt; (or 0-length row.names)</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">outputs</span>(mySim)   <span class="co"># shows all files and objects that are &quot;outputs&quot;</span></code></pre></div>
-<pre><code>##   objectName                                            file     fun
-## 1  landscape /tmp/RtmpjoBK9W/simOutputs/landscape_year10.rds saveRDS
+<pre><code>##   objectName                                               file     fun
+## 1  landscape C:/Temp/RtmpKGqkUr/simOutputs/landscape_year10.rds saveRDS
 ##   package saveTime saved arguments
 ## 1    base       10    NA        NA</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">params</span>(mySim)$randomLandscapes$.saveInitialTime</code></pre></div>
@@ -868,7 +867,7 @@ mySim &lt;-<span class="st"> </span><span class="kw">simInit</span>(<span class=
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">params</span>(mySim)$randomLandscapes$.saveObjects</code></pre></div>
 <pre><code>## [1] &quot;landscape&quot;</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">params</span>(mySim)$randomLandscapes$.savePath</code></pre></div>
-<pre><code>## [1] &quot;/tmp/RtmpjoBK9W/simOutputs/randomLandscapes&quot;</code></pre>
+<pre><code>## [1] &quot;C:\\Temp\\RtmpKGqkUr/simOutputs/randomLandscapes&quot;</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">ftmp &lt;-<span class="st"> </span><span class="kw">file.path</span>(<span class="kw">tempdir</span>(), <span class="st">&quot;spades_vignetteOutputs&quot;</span>)
 <span class="kw">pdf</span>(ftmp)
 <span class="kw">clearPlot</span>()
@@ -879,7 +878,7 @@ mySim2 &lt;-<span class="st"> </span><span class="kw">spades</span>(mySim)
   <span class="dt">objectName =</span> <span class="st">&quot;landscape&quot;</span>, <span class="dt">fun =</span> <span class="st">&quot;writeRaster&quot;</span>, <span class="dt">package =</span> <span class="st">&quot;raster&quot;</span>,
   <span class="dt">saveTime =</span> <span class="kw">c</span>(<span class="dv">3</span>,<span class="dv">6</span>), <span class="dt">arguments =</span> <span class="kw">I</span>(<span class="kw">lapply</span>(<span class="kw">c</span>(<span class="dv">3</span>,<span class="dv">6</span>), function(x) {
     <span class="kw">list</span>(<span class="dt">dataType =</span> <span class="st">&quot;FLT4S&quot;</span>, <span class="dt">format =</span> <span class="st">&quot;raster&quot;</span>, <span class="dt">overwrite =</span> <span class="ot">TRUE</span>)
-  })))
+})))
 mySim2 &lt;-<span class="st"> </span><span class="kw">spades</span>(mySim)
 <span class="kw">dev.off</span>()</code></pre></div>
 <pre><code>## png 
