@@ -27,12 +27,14 @@
 #      defineParameter(".saveInitialTime", "numeric", NA_real_, NA, NA, "time ..."),
 #      defineParameter(".saveInterval", "numeric", NA_real_, NA, NA, "time ...")
 #    ),
-#    inputObjects = data.frame(objectName = character(), objectClass = character(),
-#                              sourceURL = character(), other = character(),
-#                              stringsAsFactors = FALSE),
-#    outputObjects = data.frame(objectName = globals(sim)$stackName,
-#                               objectClass = "RasterStack",
-#                               other = NA_character_, stringsAsFactors = FALSE)
+#    inputObjects = bind_rows(
+#      expectsInput(objectName = NA_character_, objectClass = NA_character_,
+#                   desc = NA_character_, sourceURL = NA_character_, other = NA_character_)
+#    ),
+#    outputObjects = bind_rows(
+#      createsOutput(objectName = globals(sim)$stackName, objectClass = "RasterStack",
+#                    desc = NA_character_, other = NA_character_)
+#    )
 #  ))
 
 ## ----passing-params, eval=FALSE, echo=TRUE-------------------------------
@@ -170,7 +172,8 @@ mySim <- simInit(
   modules = list("randomLandscapes", "fireSpread", "caribouMovement"),
   objects = list(),
   paths = list(modulePath = system.file("sampleModules", package = "SpaDES"))
-  ) %>% spades()
+  ) %>% 
+  spades()
 dev.off()
 unlink(ftmp)
 
@@ -187,14 +190,18 @@ times <- list(start = 0.0, end = 20)
 parameters <- list(
   .globals = list(stackName = "landscape", burnStats = "nPixelsBurned")
 )
-modules <- list("randomLandscapes", "fireSpread", "caribouMovement")
+modules <- list("SpaDES_sampleModules")
 paths <- list(modulePath = system.file("sampleModules", package = "SpaDES"))
 
 mySim <- simInit(times = times, params = parameters, modules = modules, paths = paths)
 
 ## examine simulation module (object) dependencies
 depsEdgeList(mySim, FALSE)      # all object dependency relationships
+clearPlot()
 moduleDiagram(mySim)            # simplified visual representation of modules
+
+clearPlot()
+moduleDiagram(mySim, showParents = TRUE) # similar, but showing parent module grouping
 
 # detailed visual representation of objects
 objectDiagram(mySim, width = 720)
@@ -305,7 +312,7 @@ unlink(ftmp)
 #  openModules(system.file("sampleModules", package = "SpaDES"), "moduleName")
 
 ## ----download-module, echo=TRUE, eval=FALSE------------------------------
-#  downloadModule("moduleName", "path/to/my/modules/directory")
+#  downloadModule("moduleName")
 
 ## ----create-new-module, eval=FALSE, echo=TRUE, message=FALSE-------------
 #  # create a new module called "randomLandscape" in the "custom-modules" subdirectory

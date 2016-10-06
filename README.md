@@ -2,7 +2,8 @@
 
 ### Develop and run spatially explicit discrete event simulation models
 
-Easily implement a variety of simulation models, with a focus on spatially explicit models. These include raster-based, event-based, and agent-based models.
+Easily implement a variety of simulation models, with a focus on spatially explicit models.
+These include raster-based, event-based, and agent-based models.
 The core simulation components are built upon a discrete event simulation framework that facilitates modularity, and easily enables the user to include additional functionality by running user-built simulation modules. 
 Included are numerous tools to rapidly visualize raster and other maps.
 
@@ -12,7 +13,7 @@ Included are numerous tools to rapidly visualize raster and other maps.
 
 ## Installation
 
-Building packages from source requires the appropriate development libraries for your operating system (*e.g.*, Windows users should install [Rtools](http://cran.r-project.org/bin/windows/Rtools/)).
+Building packages from source requires the appropriate development libraries for your operating system (*e.g.*, Windows users should install [Rtools](https://cran.r-project.org/bin/windows/Rtools/)).
 
 The suggested package `fastshp` can be installed with:
 
@@ -23,7 +24,7 @@ install.packages("fastshp", repos = "http://rforge.net", type = "source")
 ### Current stable release
 
 [![Build Status](https://travis-ci.org/PredictiveEcology/SpaDES.svg?branch=master)](https://travis-ci.org/PredictiveEcology/SpaDES)
-[![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/PredictiveEcology/SpaDES?branch=master&svg=true)](https://ci.appveyor.com/project/achubaty/SpaDES)
+[![Appveyor Build status](https://ci.appveyor.com/api/projects/status/2fxqhgk6miv2fytd/branch/master?svg=true)](https://ci.appveyor.com/project/achubaty/spades/branch/master)
 [![Coverage Status](https://coveralls.io/repos/github/PredictiveEcology/SpaDES/badge.svg?branch=master)](https://coveralls.io/github/PredictiveEcology/SpaDES?branch=master)
 [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/SpaDES)](https://cran.r-project.org/package=SpaDES)
 [![Downloads](http://cranlogs.r-pkg.org/badges/grand-total/SpaDES)](https://cran.r-project.org/package=SpaDES)
@@ -40,13 +41,13 @@ install.packages("SpaDES")
 ```r
 #install.packages("devtools")
 library("devtools")
-install_github("PredictiveEcology/SpaDES") # stable
+install_github("PredictiveEcology/SpaDES", dependencies = TRUE) # stable
 ```
 
 ### Development version (unstable)
 
 [![Build Status](https://travis-ci.org/PredictiveEcology/SpaDES.svg?branch=development)](https://travis-ci.org/PredictiveEcology/SpaDES)
-[![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/PredictiveEcology/SpaDES?branch=development&svg=true)](https://ci.appveyor.com/project/achubaty/SpaDES)
+[![Appveyor Build status](https://ci.appveyor.com/api/projects/status/2fxqhgk6miv2fytd/branch/development?svg=true)](https://ci.appveyor.com/project/achubaty/spades/branch/development)
 [![Coverage Status](https://coveralls.io/repos/github/PredictiveEcology/SpaDES/badge.svg?branch=development)](https://coveralls.io/github/PredictiveEcology/SpaDES?branch=development)
 
 **Install from GitHub:**
@@ -54,14 +55,14 @@ install_github("PredictiveEcology/SpaDES") # stable
 ```r
 #install.packages("devtools")
 library("devtools")
-install_github("PredictiveEcology/SpaDES", ref = "development") # unstable
+install_github("PredictiveEcology/SpaDES", ref = "development", dependencies = TRUE) # unstable
 ```
 
 ## Getting started
 
 **Vignettes:**
 
-Available via our [wiki](https://github.com/PredictiveEcology/SpaDES/wiki/Help-Vignettes) or via `browseVignettes(package="SpaDES")`.
+Available via our [wiki](https://github.com/PredictiveEcology/SpaDES/wiki/Help-Vignettes) or via `browseVignettes(package = "SpaDES")`.
 
 **Wiki:**
 

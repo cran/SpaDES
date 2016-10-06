@@ -46,23 +46,37 @@ Sl = SpatialLines(list(S1, S2))
 Plot(Sl, gp = gpar(col = c("red", "blue"), lwd = 2), addTo = "landscape$DEM")
 
 ## ----mixing_layer_types, eval=TRUE, echo=TRUE, fig.height=5--------------
-Plot(landscape, caribou, mySim$DEM, SpP, new = TRUE, axes = TRUE,
-     gp = gpar(cex = 0.5), visualSqueeze = 0.7)
+clearPlot()
+Plot(landscape, caribou, mySim$DEM, SpP, axes = TRUE,
+     gp = gpar(cex = 0.5), visualSqueeze = 0.65)
 
 ## ----ggplot, eval=TRUE, echo=TRUE, cache=TRUE, fig.height=2--------------
 library(ggplot2)
 ggObj <- qplot(stats::rnorm(1e3), binwidth = 0.1)
+clearPlot()
+Plot(caribou, axes = "L", new=TRUE) 
+Plot(ggObj) 
 
-Plot(caribou, ggObj, new = TRUE) 
+## ----base-objects, eval=FALSE, echo=TRUE, cache=TRUE, fig.height=2-------
+#  baseObj <- rnorm(1e3)
+#  baseObj2 <- baseObj * 1.2 + rnorm(1e3)
+#  clearPlot()
+#  Plot(baseObj, axes = "L", ylab = "Something meaningful")
+#  Plot(baseObj, baseObj2, addTo = "scatterplot", axes = TRUE)
+#  newPoints <- rnorm(10)
+#  newPoints2 <- newPoints * 1.2 + rnorm(10)
+#  Plot(newPoints, newPoints2, addTo="scatterplot", col = "red")
 
 ## ----simList, eval=TRUE, echo=TRUE, cache=TRUE, fig.height=2-------------
-Plot(mySim, new = TRUE) 
+clearPlot()
+Plot(mySim)
 
 ## ----set_colours, eval=TRUE, echo=TRUE, fig.height=2---------------------
 library(RColorBrewer)
 
 # can change colour palette
-Plot(landscape, new = TRUE) # original
+clearPlot()
+Plot(landscape) # original
 
 mapColours <- list(
   DEM = topo.colors(50),
@@ -70,46 +84,60 @@ mapColours <- list(
   habitatQuality = brewer.pal(9, "Spectral")
 )
 setColors(landscape, n = 50) <- mapColours
-Plot(landscape, new = TRUE) # oh, how pretty!
+Plot(landscape, new=TRUE) # oh, how pretty!
 
 ## ----gp_gpAxis_gpText, eval=TRUE, echo=TRUE, fig.height=2----------------
-Plot(caribou, new = TRUE, gpAxis = gpar(cex = 0.4), size = 1)
+clearPlot()
+Plot(caribou, gpAxis = gpar(cex = 0.4), size = 1)
 Plot(mySim$DEM, gpText = gpar(cex = 0.4))
-Plot(mySim$DEM, caribou, gpText = list(gpar(cex = 2), gpar(cex = 0.1)), new = TRUE)
+clearPlot()
+Plot(mySim$DEM, caribou, gpText = list(gpar(cex = 2), gpar(cex = 0.1)), new=TRUE)
 
 ## ----visualSqueeze, eval=TRUE, echo=TRUE, fig.height=2-------------------
 # x axis gets cut off in pdf and html
-Plot(mySim$DEM, new = TRUE)
-Plot(mySim$DEM, visualSqueeze = 0.6, new = TRUE)
+clearPlot()
+Plot(mySim$DEM)
+clearPlot()
+Plot(mySim$DEM, visualSqueeze = 0.6, new=TRUE)
 
 ## ----legendRange, eval=TRUE, echo=TRUE, fig.height=2---------------------
-Plot(mySim$DEM, legendRange = c(0, 500), new = TRUE)
+clearPlot()
+Plot(mySim$DEM, legendRange = c(0, 500), new=TRUE)
 
 ## ----zoomExtent, eval=TRUE, echo=TRUE, fig.height=2----------------------
 Plot(mySim$DEM, zoomExtent = extent(c(-1, 10, -1, 20)), new = TRUE)
 
 ## ----arrows, eval=TRUE, echo=TRUE, fig.height=2--------------------------
-Plot(mySim$DEM, new = TRUE)
+clearPlot()
+Plot(mySim$DEM)
 Plot(Sl, addTo = "mySim$DEM", length = 0.2)
 
+## ----new-as-list---------------------------------------------------------
+clearPlot()
+Plot(landscape)
+Plot(landscape, new = list(TRUE, FALSE, TRUE), axes = "L")
+
 ## ----simple_add, eval=TRUE, echo=TRUE, fig.height=3----------------------
-Plot(landscape, new = TRUE)
+clearPlot()
+Plot(landscape)
 # can add a new plot to the plotting window
 Plot(caribou, new = FALSE, axes = FALSE)
 
 ## ----add_with_rearrangement, eval=TRUE, echo=TRUE, fig.height=2----------
-Plot(landscape, new = TRUE)
+clearPlot()
+Plot(landscape)
 # can add a new plot to the plotting window
 Plot(caribou, new = FALSE, axes = FALSE)
 
 ## ----add_with_same_name, eval=TRUE, echo=TRUE, fig.height=2--------------
-Plot(landscape, new = TRUE)
+clearPlot()
+Plot(landscape)
 landscape$forestCover[] = ((landscape$forestCover[] +10) %% 30)
 # can add a new plot to the plotting window
 Plot(landscape, new = FALSE)
 # note: zeros are treated as no colour by default.
-# if this is not the correct behavior, use `zero.color=NULL`
-Plot(landscape, new = FALSE, zero.color = NULL)
+# if this is not the correct behavior, can use `zero.color`
+Plot(landscape, new = FALSE, zero.color = "blue")
 
 ## ----speedup, eval=TRUE, echo=TRUE, fig.height=2-------------------------
 system.time(Plot(landscape, caribou, mySim$DEM, new = TRUE))
@@ -117,28 +145,33 @@ system.time(Plot(landscape, caribou, mySim$DEM, speedup = 10, new = TRUE))
 # can add a new plot to the plotting window
 
 ## ----add, eval=TRUE, echo=TRUE, fig.height=2-----------------------------
-Plot(landscape, new = TRUE)
-Plot(caribou, addTo = "landscape$DEM", size = 2, axes = FALSE)
+clearPlot()
+Plot(landscape)
+Plot(caribou, addTo = "landscape$DEM", size = 2)
 
 ## ----clearPlot, eval=TRUE, echo=TRUE, fig.height=2-----------------------
 clearPlot()
 Plot(caribou)
 
 ## ----clickValues, eval=FALSE, echo=TRUE----------------------------------
-#  Plot(landscape, new = TRUE)
+#  clearPlot()
+#  Plot(landscape)
 #  clickValues(3) # click at three locations on the Plot device
 
 ## ----clickExtent, eval=FALSE, echo=TRUE----------------------------------
-#  Plot(landscape, new = TRUE)
+#  clearPlot()
+#  Plot(landscape)
 #  clickExtent() # click at two locations on the Plot device
 
 ## ----rePlot, eval=FALSE, echo=TRUE, cache=TRUE---------------------------
 #  rePlot()
 #  rePlot(4)
 #  rePlot(visualSqueeze = 1, axes = FALSE)
+#  rePlot(visualSqueeze = 0.7, axes = FALSE, cols = "Reds", new=TRUE)
 
 ## ----Plot a .spadesPlot object, eval=FALSE, echo=TRUE, cache=TRUE--------
-#  plots <- Plot(landscape, new = TRUE)
+#  clearPlot()
+#  plots <- Plot(landscape)
 #  
 #  # change values
 #  landscape$forestCover[landscape$habitatQuality > 0.9] <- 0
@@ -148,6 +181,6 @@ Plot(caribou)
 #  rePlot()
 #  
 #  # but can be combined with other objects
-#  Plot(caribou, plots, new = TRUE)
+#  Plot(caribou, plots)
 #  Plot(caribou, plots, Sl)
 
