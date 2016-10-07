@@ -17,10 +17,10 @@ if (getRversion() >= "3.1.0") {
 #'
 .paths <- function() {
   list(
-    cachePath = file.path(".", "cache"),
-    inputPath = file.path("."),
-    modulePath = getOption("spades.modulesPath"),
-    outputPath = file.path(".")
+    cachePath = getOption("spades.cachePath"),
+    inputPath = getOption("spades.inputPath"),
+    modulePath = getOption("spades.modulePath"),
+    outputPath = getOption("spades.outputPath")
   )
 }
 
@@ -281,13 +281,13 @@ setMethod(
 #' the defaults are as follows:
 #'
 #' \itemize{
-#'   \item \code{cachePath}: a subdirectory of the current working directory (\code{"./cache"});
+#'   \item \code{cachePath}: \code{getOption("spades.cachePath")};
 #'
-#'   \item \code{inputPath}: the current working directory (\code{"."};
+#'   \item \code{inputPath}: \code{getOption("spades.modulePath")};
 #'
-#'   \item \code{modulePath}: \code{getOption("spades.modulePath")};
+#'   \item \code{modulePath}: \code{getOption("spades.inputPath")};
 #'
-#'   \item \code{inputPath}: the current working directory (\code{"."};
+#'   \item \code{inputPath}: \code{getOption("spades.outputPath")}.
 #' }
 #'
 #' @note
@@ -749,7 +749,8 @@ setMethod(
 #' @rdname simInit
 setMethod(
   "simInit",
-  signature(),
+  signature(times = "ANY", params = "ANY", modules = "ANY", objects = "ANY",
+            paths = "ANY", inputs = "ANY", outputs = "ANY", loadOrder = "ANY"),
   definition = function(times, params, modules, objects, paths, inputs, outputs, loadOrder) {
 
     li <- lapply(names(match.call()[-1]), function(x) eval(parse(text = x)))
@@ -892,7 +893,7 @@ setMethod(
             } else if (debug[i] == "simList") {
               print(sim)
             } else if (grepl(debug[i], pattern = "\\(") ) {
-              tryCatch(eval(parse(text = debug[i])), error = function(x) "")
+              print(tryCatch(eval(parse(text = debug[i])), error = function(x) ""))
             } else {
               print(do.call(debug[i], list(sim)))
             }
