@@ -1,3 +1,5 @@
+<img align="right" width="80" pad="20" src="https://github.com/PredictiveEcology/SpaDES/raw/master/docs/images/SpaDES.png">
+
 # Spatial Discrete Event Simulation (SpaDES)
 
 [![Build Status](https://travis-ci.org/PredictiveEcology/SpaDES.svg?branch=master)](https://travis-ci.org/PredictiveEcology/SpaDES)
@@ -15,8 +17,19 @@ The core simulation components (provided by [`SpaDES.core`](http://spades-core.p
 Included are numerous tools to visualize rasters and other maps (via [`quickPlot`](http://quickplot.predictiveecology.org/)), and caching methods for reproducible simulations (via [`reproducible`](http://reproducible.predictiveecology.org/)).
 Additional functionality is provided by the [`SpaDES.addins`](http://spades-addins.predictiveecology.org/) and [`SpaDES.shiny`](http://spades-shiny.predictiveecology.org/) packages.
 
-![](http://spades.predictiveecology.org/lcc05.png)
-![](http://spades.predictiveecology.org/MapsSmall.gif)
+![](http://spades.predictiveecology.org/images/lcc05.png)
+![](http://spades.predictiveecology.org/images/MapsSmall.gif)
+
+## Getting started
+
+- [Getting started guide](https://github.com/PredictiveEcology/SpaDES/wiki/Getting-Started-Guide)
+- ['`SpaDES` 4 Dummies' guide](https://github.com/CeresBarros/SpaDES4Dummies)
+- [Vignettes](https://github.com/PredictiveEcology/SpaDES/wiki/Help-Vignettes)
+- [Wiki](https://github.com/PredictiveEcology/SpaDES/wiki)
+
+### Workshops
+
+- [SpaDES Workshops](https://github.com/PredictiveEcology/SpaDES/wiki/SpaDES-Workshops)
 
 ### Websites
 
@@ -90,15 +103,6 @@ install_github("PredictiveEcology/SpaDES", dependencies = TRUE) # stable
 library("devtools")
 install_github("PredictiveEcology/SpaDES", ref = "development", dependencies = TRUE) # unstable
 ```
-
------
-
-## Getting started
-
-- [Getting started guide](https://github.com/PredictiveEcology/SpaDES/wiki/Getting-Started-Guide)
-- [Vignettes](https://github.com/PredictiveEcology/SpaDES/wiki/Help-Vignettes)
-- [Wiki](https://github.com/PredictiveEcology/SpaDES/wiki)
-- [Workshops](http://predictiveecology.org/2016/08/09/SpaDES-workshops.html)
 
 ## Getting help
 
