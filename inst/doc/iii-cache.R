@@ -90,3 +90,17 @@ if (requireNamespace("archivist")) {
   Plot(map)
 }
 
+## ---- eval=FALSE, echo=TRUE----------------------------------------------
+#  simInit --> many .inputObjects calls
+#  
+#  experiment --> many spades calls --> many module calls --> many event calls --> many function calls
+#  
+
+## ---- eval=FALSE, echo=TRUE----------------------------------------------
+#  parameters = list(
+#    FireModule = list(.useCache = TRUE)
+#  )
+#  mySim <- simInit(..., params = parameters)
+#  mySimOut <- spades(mySim)
+#  
+
