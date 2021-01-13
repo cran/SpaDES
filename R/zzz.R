@@ -9,17 +9,17 @@
 
 #' Check if a package is in the search path
 #'
-#' @importFrom utils packageVersion
-#'
 #' @keywords internal
 #' @rdname isAttached
 .isAttached <- function(x) {
   paste0("package:", x) %in% search()
 }
 
+#' @importFrom utils packageVersion
 .onAttach <- function(libname, pkgname) {
   pkgs <- c("reproducible", "quickPlot",
-            "SpaDES.core", "SpaDES.tools", "SpaDES.addins")#, "SpaDES.shiny")
+            "SpaDES.core", "SpaDES.tools",# "SpaDES.experiment",
+            "SpaDES.addins")#, "SpaDES.shiny")
 
   needed <- pkgs[!.isAttached(pkgs)]
   assign("needed", value = needed, envir = .pkgEnv)
@@ -27,9 +27,9 @@
   out <- NULL
 
   if (length(needed) > 0) {
-    suppressPackageStartupMessages(
+    suppressPackageStartupMessages({
       out <- lapply(needed, library, character.only = TRUE, warn.conflicts = FALSE)
-    )
+    })
   }
 
   .vers <- vapply(pkgs, function(x) {

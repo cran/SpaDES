@@ -11,14 +11,14 @@
 
 Metapackage for implementing a variety of event-based models, with a focus on
 spatially explicit models. These include raster-based, event-based, and
-agent-based models. The core simulation components (provided by \code{SpaDES.core})
+agent-based models. The core simulation components (provided by \pkg{SpaDES.core})
 are built upon a discrete event simulation (DES; see Matloff (2011) ch 7.8.3
 \url{https://nostarch.com/artofr.htm}) framework that facilitates
 modularity, and easily enables the user to include additional functionality by
-running user-built simulation modules (see also \code{SpaDES.tools}).
-Included are numerous tools to visualize rasters and other maps (via \code{quickPlot}),
-and caching methods for reproducible simulations (via \code{reproducible}).
-Additional functionality is provided by the \code{SpaDES.addins} and
+running user-built simulation modules (see also \pkg{SpaDES.tools}).
+Included are numerous tools to visualize rasters and other maps (via \pkg{quickPlot}),
+and caching methods for reproducible simulations (via \pkg{reproducible}).
+Additional functionality is provided by the \pkg{SpaDES.addins} and
 \code{SpaDES.shiny} packages (see below).
 
 Bug reports:
@@ -103,11 +103,11 @@ Useful links:
 
 }
 \author{
-\strong{Maintainer}: Alex M Chubaty \email{alex.chubaty@gmail.com} (0000-0001-7146-8135)
+\strong{Maintainer}: Alex M Chubaty \email{alex.chubaty@gmail.com} (\href{https://orcid.org/0000-0001-7146-8135}{ORCID})
 
 Authors:
 \itemize{
-  \item Eliot J B McIntire \email{eliot.mcintire@canada.ca} (0000-0002-6914-8316)
+  \item Eliot J B McIntire \email{eliot.mcintire@canada.ca} (\href{https://orcid.org/0000-0002-6914-8316}{ORCID})
 }
 
 Other contributors:

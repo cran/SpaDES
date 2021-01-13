@@ -1,6 +1,6 @@
 #
 #  SpaDES/R/SpaDES-package.R by Alex M Chubaty and Eliot J B McIntire
-#  Copyright (C) 2015-2019 Her Majesty the Queen in Right of Canada,
+#  Copyright (C) 2015-2021 Her Majesty the Queen in Right of Canada,
 #   as represented by the Minister of Natural Resources Canada
 #
 
@@ -13,14 +13,14 @@
 #'
 #' Metapackage for implementing a variety of event-based models, with a focus on
 #' spatially explicit models. These include raster-based, event-based, and
-#' agent-based models. The core simulation components (provided by \code{SpaDES.core})
+#' agent-based models. The core simulation components (provided by \pkg{SpaDES.core})
 #' are built upon a discrete event simulation (DES; see Matloff (2011) ch 7.8.3
 #' \url{https://nostarch.com/artofr.htm}) framework that facilitates
 #' modularity, and easily enables the user to include additional functionality by
-#' running user-built simulation modules (see also \code{SpaDES.tools}).
-#' Included are numerous tools to visualize rasters and other maps (via \code{quickPlot}),
-#' and caching methods for reproducible simulations (via \code{reproducible}).
-#' Additional functionality is provided by the \code{SpaDES.addins} and
+#' running user-built simulation modules (see also \pkg{SpaDES.tools}).
+#' Included are numerous tools to visualize rasters and other maps (via \pkg{quickPlot}),
+#' and caching methods for reproducible simulations (via \pkg{reproducible}).
+#' Additional functionality is provided by the \pkg{SpaDES.addins} and
 #' \code{SpaDES.shiny} packages (see below).
 #'
 #' Bug reports:
