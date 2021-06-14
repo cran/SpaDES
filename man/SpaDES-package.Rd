@@ -18,7 +18,7 @@ modularity, and easily enables the user to include additional functionality by
 running user-built simulation modules (see also \pkg{SpaDES.tools}).
 Included are numerous tools to visualize rasters and other maps (via \pkg{quickPlot}),
 and caching methods for reproducible simulations (via \pkg{reproducible}).
-Additional functionality is provided by the \pkg{SpaDES.addins} and
+Additional functionality is provided by the suggested \pkg{SpaDES.addins} and
 \code{SpaDES.shiny} packages (see below).
 
 Bug reports:
@@ -96,7 +96,7 @@ Provides several aspects of reproducible simulations, including simulation cachi
 \seealso{
 Useful links:
 \itemize{
-  \item \url{http://spades.predictiveecology.org}
+  \item \url{https://spades.predictiveecology.org}
   \item \url{https://github.com/PredictiveEcology/SpaDES}
   \item Report bugs at \url{https://github.com/PredictiveEcology/SpaDES/issues}
 }
