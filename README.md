@@ -8,7 +8,7 @@
 [![Codecov test coverage](https://codecov.io/gh/PredictiveEcology/SpaDES/branch/master/graph/badge.svg)](https://app.codecov.io/gh/PredictiveEcology/SpaDES?branch=master)
 <!-- badges: end -->
 
-<img align="right" width="80" pad="20" src="https://github.com/PredictiveEcology/SpaDES/raw/master/docs/images/SpaDES.png">
+<img align="right" width="80" pad="20" src="https://github.com/PredictiveEcology/SpaDES/raw/master/man/figures/SpaDES.png">
 
 ## Develop and run spatially explicit discrete event simulation models
 
@@ -18,14 +18,14 @@ The core simulation components (provided by [`SpaDES.core`](https://spades-core.
 Included are numerous tools to visualize rasters and other maps (via [`quickPlot`](https://quickplot.predictiveecology.org/)), and caching methods for reproducible simulations (via [`reproducible`](https://reproducible.predictiveecology.org/)).
 Additional functionality is provided by the [`SpaDES.addins`](https://spades-addins.predictiveecology.org/) and [`SpaDES.shiny`](https://spades-shiny.predictiveecology.org/) packages.
 
-![](https://spades.predictiveecology.org/images/lcc05.png)
-![](https://spades.predictiveecology.org/images/MapsSmall.gif)
+![](https://github.com/PredictiveEcology/SpaDES/raw/master/man/figures//lcc05.png)
+![](https://github.com/PredictiveEcology/SpaDES/raw/master/man/figures//MapsSmall.gif)
 
 ## Getting started
 
 - [Getting started guide](https://github.com/PredictiveEcology/SpaDES/wiki/Getting-Started-Guide)
 - [LCC2005 tutorial](https://github.com/PredictiveEcology/SpaDES-modules/blob/master/modules/LCC2005/LCC2005.Rmd)
-- ['SpaDES 4 Dummies' guide](https://github.com/CeresBarros/SpaDES4Dummies)
+- ['SpaDES 4 Dummies' guide](https://ceresbarros.github.io/SpaDES4Dummies/)
 - [SpaDES users group](https://groups.google.com/d/forum/spades-users)
 - [Vignettes](https://github.com/PredictiveEcology/SpaDES/wiki/Help-Vignettes)
 - [Wiki](https://github.com/PredictiveEcology/SpaDES/wiki)
@@ -70,7 +70,7 @@ A package to accompany the LandR landscape ecosystem modules.
 
 A re-implementation in pure R of the NetLogo dictionary.
 
-**Predictive Ecology Blog:** <http://predictiveecology.org/>
+**Predictive Ecology Blog:** <https://predictiveecology.org/>
 
 **Canadian Forest Service Adaptation Toolkit:**
 <https://www.nrcan.gc.ca/climate-change-adapting-impacts-and-reducing-emissions/climate-change-impacts-forests/forest-change-adaptation-tools/17770>
@@ -96,7 +96,7 @@ A re-implementation in pure R of the NetLogo dictionary.
     
 - *Windows:* install [Rtools](https://cran.r-project.org/bin/windows/Rtools/).
 
-- *macOS:* install Xcode commandline tools from the terminal: `xcode-select install`. 
+- *macOS:* install Xcode command line tools from the terminal: `xcode-select install`. 
   
 - *Debian/Ubuntu Linux:* ensure `r-base-dev` is installed.
 
@@ -161,4 +161,4 @@ Contact us via the package's GitHub site:
 
 -----
 
-Copyright (C) 2021 Her Majesty the Queen in Right of Canada, as represented by the Minister of Natural Resources Canada
+Copyright (C) 2022 Her Majesty the Queen in Right of Canada, as represented by the Minister of Natural Resources Canada.
