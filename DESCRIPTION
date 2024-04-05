@@ -16,8 +16,8 @@ Description: Metapackage for implementing a variety of event-based models, with
     the 'SpaDES.addins' and 'SpaDES.shiny' packages.
 URL: https://spades.predictiveecology.org,
         https://github.com/PredictiveEcology/SpaDES
-Date: 2022-08-19
-Version: 2.0.9
+Date: 2024-04-04
+Version: 2.0.10
 Authors@R: c(
     person("Alex M", "Chubaty", email = "achubaty@for-cast.ca",
            role = c("aut", "cre"), comment = c(ORCID = "0000-0001-7146-8135")),
@@ -27,14 +27,14 @@ Authors@R: c(
            role = c("ctb")),
     person("Steve", "Cumming", email = "Steve.Cumming@sbf.ulaval.ca",
            role = c("ctb")),
-    person(paste("Her Majesty the Queen in Right of Canada,",
+    person(paste("His Majesty the Queen in Right of Canada,",
                  "as represented by the Minister of Natural Resources Canada"),
            role = "cph")
     )
-Depends: R (>= 4.0)
-Imports: methods, quickPlot, reproducible (>= 1.2.2), SpaDES.core (>=
-        1.0.4), SpaDES.tools, utils
-Suggests: covr, knitr, rmarkdown, testthat, SpaDES.addins
+Depends: R (>= 4.2)
+Imports: methods, quickPlot (>= 1.0.2), reproducible (>= 2.0.10),
+        SpaDES.core (>= 2.0.3), SpaDES.tools (>= 2.0.5), utils
+Suggests: covr, knitr, rmarkdown, testthat
 Encoding: UTF-8
 Language: en-CA
 License: GPL-3
@@ -42,15 +42,15 @@ VignetteBuilder: knitr, rmarkdown
 BugReports: https://github.com/PredictiveEcology/SpaDES/issues
 ByteCompile: yes
 Collate: 'spades-package.R' 'zzz.R'
-RoxygenNote: 7.2.1
+RoxygenNote: 7.3.1
 NeedsCompilation: no
-Packaged: 2022-08-19 18:48:02 UTC; achubaty
+Packaged: 2024-04-04 19:17:15 UTC; achubaty
 Author: Alex M Chubaty [aut, cre] (<https://orcid.org/0000-0001-7146-8135>),
   Eliot J B McIntire [aut] (<https://orcid.org/0000-0002-6914-8316>),
   Yong Luo [ctb],
   Steve Cumming [ctb],
-  Her Majesty the Queen in Right of Canada, as represented by the
+  His Majesty the Queen in Right of Canada, as represented by the
     Minister of Natural Resources Canada [cph]
 Maintainer: Alex M Chubaty <achubaty@for-cast.ca>
 Repository: CRAN
-Date/Publication: 2022-08-19 21:30:12 UTC
+Date/Publication: 2024-04-05 15:43:05 UTC
