@@ -16,8 +16,8 @@ Description: Metapackage for implementing a variety of event-based models, with
     the 'SpaDES.addins' and 'SpaDES.shiny' packages.
 URL: https://spades.predictiveecology.org,
         https://github.com/PredictiveEcology/SpaDES
-Date: 2024-04-04
-Version: 2.0.10
+Date: 2024-04-16
+Version: 2.0.11
 Authors@R: c(
     person("Alex M", "Chubaty", email = "achubaty@for-cast.ca",
            role = c("aut", "cre"), comment = c(ORCID = "0000-0001-7146-8135")),
@@ -44,7 +44,7 @@ ByteCompile: yes
 Collate: 'spades-package.R' 'zzz.R'
 RoxygenNote: 7.3.1
 NeedsCompilation: no
-Packaged: 2024-04-04 19:17:15 UTC; achubaty
+Packaged: 2024-04-17 15:52:42 UTC; achubaty
 Author: Alex M Chubaty [aut, cre] (<https://orcid.org/0000-0001-7146-8135>),
   Eliot J B McIntire [aut] (<https://orcid.org/0000-0002-6914-8316>),
   Yong Luo [ctb],
@@ -53,4 +53,4 @@ Author: Alex M Chubaty [aut, cre] (<https://orcid.org/0000-0001-7146-8135>),
     Minister of Natural Resources Canada [cph]
 Maintainer: Alex M Chubaty <achubaty@for-cast.ca>
 Repository: CRAN
-Date/Publication: 2024-04-05 15:43:05 UTC
+Date/Publication: 2024-04-17 19:40:25 UTC
